@@ -10,7 +10,7 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 
 def google_logger(SCOPES):
-    creds = Credentials.from_authorized_user_file("C:/Users/yustu/ParserBack/ParserBack/app/database/data/token.json", SCOPES)
+    creds = Credentials.from_authorized_user_file("./app/database/data/token.json", SCOPES)
     return creds
 
 
