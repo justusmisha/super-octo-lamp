@@ -1,0 +1,1174 @@
+2024-08-21 17:30:22,871 - INFO - Database connection pool already initialized.
+2024-08-21 17:30:41,176 - INFO - Database connection pool already initialized.
+2024-08-21 17:32:15,709 - INFO - Database connection pool already initialized.
+2024-08-21 17:32:27,801 - INFO - Database connection pool already initialized.
+2024-08-21 17:34:07,890 - INFO - Database connection pool already initialized.
+2024-08-21 17:35:25,168 - INFO - Database connection pool already initialized.
+2024-08-21 17:35:36,732 - INFO - Database connection pool already initialized.
+2024-08-21 17:36:06,556 - INFO - Database connection pool already initialized.
+2024-08-21 17:39:15,349 - INFO - Database connection pool already initialized.
+2024-08-21 17:39:26,187 - INFO - Database connection pool already initialized.
+2024-08-21 17:39:37,393 - INFO - Database connection pool already initialized.
+2024-08-21 17:42:27,490 - INFO - Database connection pool already initialized.
+2024-08-21 17:51:33,601 - INFO - Database connection pool already initialized.
+2024-08-21 18:01:53,710 - INFO - Database connection pool already initialized.
+2024-08-21 18:02:46,845 - INFO - Database connection pool already initialized.
+2024-08-21 18:04:26,739 - INFO - Database connection pool already initialized.
+2024-08-21 18:04:59,662 - INFO - Database connection pool already initialized.
+2024-08-21 18:06:28,891 - INFO - Database connection pool already initialized.
+2024-08-21 18:08:40,476 - INFO - Database connection pool already initialized.
+2024-08-21 18:09:09,426 - INFO - Database connection pool already initialized.
+2024-08-21 18:10:23,658 - INFO - Database connection pool already initialized.
+2024-08-21 18:10:43,737 - INFO - Database connection pool already initialized.
+2024-08-21 18:11:45,408 - INFO - Database connection pool already initialized.
+2024-08-21 18:14:40,844 - INFO - Database connection pool already initialized.
+2024-08-21 18:15:16,908 - INFO - Database connection pool already initialized.
+2024-08-21 18:15:33,910 - INFO - Database connection pool already initialized.
+2024-08-21 18:15:39,602 - INFO - Database connection pool already initialized.
+2024-08-21 18:16:16,920 - INFO - Database connection pool already initialized.
+2024-08-21 18:16:24,586 - INFO - Database connection pool already initialized.
+2024-08-21 18:18:28,427 - INFO - Database connection pool already initialized.
+2024-08-21 18:20:23,646 - INFO - Database connection pool already initialized.
+2024-08-21 18:23:07,861 - INFO - Database connection pool already initialized.
+2024-08-21 18:23:41,595 - INFO - Database connection pool already initialized.
+2024-08-21 18:24:30,384 - INFO - Database connection pool already initialized.
+2024-08-21 18:25:33,314 - INFO - Database connection pool already initialized.
+2024-08-21 18:40:43,605 - INFO - Database connection pool initialized.
+2024-08-21 18:40:49,200 - INFO - Database connection pool initialized.
+2024-08-21 19:08:57,205 - INFO - Database connection pool initialized.
+2024-08-21 19:09:05,168 - INFO - Database connection pool initialized.
+2024-08-21 19:13:41,436 - INFO - Database connection pool initialized.
+2024-08-21 19:14:06,874 - INFO - Database connection pool initialized.
+2024-08-21 19:14:40,561 - INFO - Database connection pool initialized.
+2024-08-21 19:16:47,756 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 10061] Connect call failed ('127.0.0.1', 5432), [Errno 10061] Connect call failed ('::1', 5432, 0, 0)
+2024-08-21 19:16:58,734 - INFO - Database connection pool initialized.
+2024-08-21 19:17:30,896 - INFO - Database connection pool initialized.
+2024-08-21 19:25:39,949 - INFO - Database connection pool initialized.
+2024-08-21 19:26:53,052 - INFO - Database connection pool initialized.
+2024-08-21 19:28:50,066 - INFO - Database connection pool initialized.
+2024-08-21 19:31:12,625 - ERROR - Failed to initialize database pool: connection was closed in the middle of operation
+2024-08-21 19:31:20,297 - INFO - Database connection pool initialized.
+2024-08-21 19:31:44,274 - INFO - Database connection pool initialized.
+2024-08-21 19:33:44,764 - INFO - Database connection pool initialized.
+2024-08-21 19:37:00,677 - ERROR - 'str' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 25, in parse_links
+    for page_number in range(self.page_numbers, 0, -1):
+TypeError: 'str' object cannot be interpreted as an integer
+2024-08-21 19:37:15,083 - INFO - Database connection pool initialized.
+2024-08-21 19:37:32,298 - ERROR - Couldn't find a tree builder with the features you requested: html.parser_base. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 30, in parse_links
+    html_soup = BeautifulSoup(response.text, 'html.parser_base')
+  File "C:\Users\yustu\ParserBack\ParserBack\.venv\lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: html.parser_base. Do you need to install a parser library?
+2024-08-21 19:38:15,609 - INFO - Database connection pool initialized.
+2024-08-21 19:38:20,477 - ERROR - Couldn't find a tree builder with the features you requested: html.parser_base. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 31, in parse_links
+    html_soup = BeautifulSoup(response.text, 'html.parser_base')
+  File "C:\Users\yustu\ParserBack\ParserBack\.venv\lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: html.parser_base. Do you need to install a parser library?
+2024-08-21 19:38:46,330 - INFO - Database connection pool initialized.
+2024-08-21 19:38:54,142 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 33, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 19:39:15,126 - INFO - Database connection pool initialized.
+2024-08-21 19:39:59,804 - INFO - Database connection pool initialized.
+2024-08-21 19:40:05,061 - INFO - Database connection pool initialized.
+2024-08-21 19:40:58,617 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 33, in parse_links
+    if not divs_with_class:
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 19:41:30,687 - INFO - Database connection pool initialized.
+2024-08-21 19:41:47,349 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 32, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 19:42:05,715 - INFO - Database connection pool initialized.
+2024-08-21 19:42:11,349 - ERROR - argument of type 'NoneType' is not iterable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 43, in parse_links
+    if final_link not in link:
+TypeError: argument of type 'NoneType' is not iterable
+2024-08-21 19:42:38,370 - INFO - Database connection pool initialized.
+2024-08-21 19:43:16,980 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 32, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 19:43:30,372 - INFO - Database connection pool initialized.
+2024-08-21 19:43:47,488 - ERROR - argument of type 'NoneType' is not iterable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 42, in parse_links
+    if final_link not in link:
+TypeError: argument of type 'NoneType' is not iterable
+2024-08-21 19:44:11,577 - INFO - Database connection pool initialized.
+2024-08-21 19:44:18,032 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 32, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 19:44:53,150 - INFO - Database connection pool initialized.
+2024-08-21 19:44:58,634 - ERROR - argument of type 'NoneType' is not iterable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 42, in parse_links
+    if final_link not in link:
+TypeError: argument of type 'NoneType' is not iterable
+2024-08-21 19:45:15,251 - INFO - Database connection pool initialized.
+2024-08-21 19:45:36,436 - INFO - Database connection pool initialized.
+2024-08-21 19:45:38,259 - INFO - Database connection pool initialized.
+2024-08-21 19:45:49,006 - INFO - Database connection pool initialized.
+2024-08-21 19:46:01,827 - INFO - Database connection pool initialized.
+2024-08-21 19:46:10,551 - INFO - Database connection pool initialized.
+2024-08-21 19:46:48,529 - ERROR - argument of type 'NoneType' is not iterable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 42, in parse_links
+    if final_link not in link:
+TypeError: argument of type 'NoneType' is not iterable
+2024-08-21 19:47:57,550 - INFO - Database connection pool initialized.
+2024-08-21 19:48:00,610 - INFO - Database connection pool closed.
+2024-08-21 19:48:06,636 - INFO - Database connection pool initialized.
+2024-08-21 19:49:12,355 - INFO - Database connection pool initialized.
+2024-08-21 19:49:39,574 - INFO - Database connection pool initialized.
+2024-08-21 19:51:30,250 - INFO - Database connection pool initialized.
+2024-08-21 19:53:03,104 - INFO - Database connection pool initialized.
+2024-08-21 19:54:28,356 - INFO - Database connection pool initialized.
+2024-08-21 19:54:47,171 - INFO - Database connection pool initialized.
+2024-08-21 19:55:19,986 - INFO - Database connection pool initialized.
+2024-08-21 19:55:58,310 - INFO - Database connection pool initialized.
+2024-08-21 19:56:46,198 - INFO - Database connection pool initialized.
+2024-08-21 19:57:15,105 - INFO - Database connection pool initialized.
+2024-08-21 19:57:59,089 - INFO - Database connection pool initialized.
+2024-08-21 19:58:06,266 - ERROR - Failed to fetch data: invalid input for query argument $2: [] ('list' object cannot be interpreted as an integer)
+2024-08-21 19:58:06,266 - ERROR - Error while inserting link: invalid input for query argument $2: [] ('list' object cannot be interpreted as an integer)
+2024-08-21 19:58:27,856 - INFO - Database connection pool initialized.
+2024-08-21 19:58:31,144 - INFO - Database connection pool initialized.
+2024-08-21 19:58:35,657 - ERROR - Failed to fetch data: invalid input for query argument $2: [<Record id=5>] ('list' object cannot be interpreted as an integer)
+2024-08-21 19:58:35,658 - ERROR - Error while inserting link: invalid input for query argument $2: [<Record id=5>] ('list' object cannot be interpreted as an integer)
+2024-08-21 19:58:39,594 - INFO - Database connection pool initialized.
+2024-08-21 19:58:54,722 - INFO - Database connection pool initialized.
+2024-08-21 19:58:58,716 - ERROR - Error while fetching query from Database: query iphone: 'list' object has no attribute 'id'
+2024-08-21 19:59:09,589 - INFO - Database connection pool initialized.
+2024-08-21 19:59:15,543 - ERROR - Failed to fetch data: invalid input for query argument $2: <Record id=5> ('asyncpg.Record' object cannot be interpreted as an integer)
+2024-08-21 19:59:15,543 - ERROR - Error while inserting link: invalid input for query argument $2: <Record id=5> ('asyncpg.Record' object cannot be interpreted as an integer)
+2024-08-21 19:59:28,579 - INFO - Database connection pool initialized.
+2024-08-21 19:59:30,275 - ERROR - Error while fetching query from Database: query iphone: 'list' object has no attribute 'rows'
+2024-08-21 19:59:58,617 - INFO - Database connection pool initialized.
+2024-08-21 20:00:18,883 - ERROR - Failed to fetch data: invalid input for query argument $2: [<Record id=5>] ('list' object cannot be interpreted as an integer)
+2024-08-21 20:00:18,883 - ERROR - Error while inserting link: invalid input for query argument $2: [<Record id=5>] ('list' object cannot be interpreted as an integer)
+2024-08-21 20:00:26,254 - ERROR - Failed to fetch data: invalid input for query argument $2: [<Record id=5>] ('list' object cannot be interpreted as an integer)
+2024-08-21 20:00:26,255 - ERROR - Error while inserting link: invalid input for query argument $2: [<Record id=5>] ('list' object cannot be interpreted as an integer)
+2024-08-21 20:00:32,313 - INFO - Database connection pool initialized.
+2024-08-21 20:00:34,282 - ERROR - 'list' object has no attribute 'id'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 23, in parse_links
+    print(query_id.id)
+AttributeError: 'list' object has no attribute 'id'
+2024-08-21 20:00:47,979 - INFO - Database connection pool initialized.
+2024-08-21 20:00:51,301 - ERROR - Failed to fetch data: invalid input for query argument $2: [<Record id=5>] ('list' object cannot be interpreted as an integer)
+2024-08-21 20:00:51,301 - ERROR - Error while inserting link: invalid input for query argument $2: [<Record id=5>] ('list' object cannot be interpreted as an integer)
+2024-08-21 20:01:01,765 - INFO - Database connection pool initialized.
+2024-08-21 20:01:40,985 - INFO - Database connection pool initialized.
+2024-08-21 20:01:42,791 - ERROR - Error while fetching query from Database: query iphone: list indices must be integers or slices, not str
+2024-08-21 20:01:58,080 - INFO - Database connection pool initialized.
+2024-08-21 20:02:01,418 - ERROR - Error while fetching query from Database: query iphone: list indices must be integers or slices, not str
+2024-08-21 20:02:10,010 - ERROR - Error while fetching query from Database: query iphone: list indices must be integers or slices, not str
+2024-08-21 20:02:20,482 - INFO - Database connection pool initialized.
+2024-08-21 20:02:27,978 - INFO - Database connection pool initialized.
+2024-08-21 20:03:26,680 - INFO - Database connection pool initialized.
+2024-08-21 20:04:00,157 - INFO - Database connection pool initialized.
+2024-08-21 20:04:02,473 - INFO - Database connection pool initialized.
+2024-08-21 20:07:41,031 - INFO - Database connection pool initialized.
+2024-08-21 20:08:57,655 - INFO - Database connection pool initialized.
+2024-08-21 20:09:18,467 - INFO - Database connection pool initialized.
+2024-08-21 20:10:16,990 - INFO - Database connection pool initialized.
+2024-08-21 20:12:22,075 - INFO - Database connection pool initialized.
+2024-08-21 20:12:43,199 - INFO - Database connection pool initialized.
+2024-08-21 20:13:26,108 - INFO - Database connection pool initialized.
+2024-08-21 20:14:19,631 - INFO - Database connection pool initialized.
+2024-08-21 20:14:54,300 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 31, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 20:16:26,670 - INFO - Database connection pool initialized.
+2024-08-21 20:16:39,037 - INFO - Database connection pool initialized.
+2024-08-21 20:16:44,174 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 31, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 20:17:28,999 - INFO - Database connection pool initialized.
+2024-08-21 20:18:45,104 - INFO - Database connection pool initialized.
+2024-08-21 20:19:55,124 - INFO - Database connection pool initialized.
+2024-08-21 20:21:24,728 - INFO - Database connection pool initialized.
+2024-08-21 20:22:45,334 - INFO - Database connection pool initialized.
+2024-08-21 20:24:42,483 - INFO - Database connection pool initialized.
+2024-08-21 20:25:16,289 - INFO - Database connection pool initialized.
+2024-08-21 20:25:25,496 - INFO - Database connection pool initialized.
+2024-08-21 20:25:33,432 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 31, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 20:28:07,219 - INFO - Database connection pool initialized.
+2024-08-21 20:28:09,409 - INFO - Database connection pool initialized.
+2024-08-21 20:28:40,000 - INFO - Database connection pool initialized.
+2024-08-21 20:29:25,808 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser.py", line 34, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-21 20:29:40,282 - INFO - Database connection pool initialized.
+2024-08-21 20:33:03,634 - INFO - Database connection pool initialized.
+2024-08-21 20:35:41,244 - INFO - Database connection pool initialized.
+2024-08-21 20:35:44,523 - INFO - Database connection pool initialized.
+2024-08-21 20:37:01,435 - INFO - Database connection pool initialized.
+2024-08-21 20:40:13,147 - INFO - Database connection pool initialized.
+2024-08-21 20:43:00,412 - INFO - Database connection pool initialized.
+2024-08-21 20:43:37,647 - INFO - Database connection pool initialized.
+2024-08-21 20:46:35,502 - INFO - Database connection pool initialized.
+2024-08-21 20:47:38,789 - INFO - Database connection pool initialized.
+2024-08-21 20:49:41,473 - INFO - Database connection pool initialized.
+2024-08-21 20:55:07,570 - INFO - Database connection pool initialized.
+2024-08-21 20:55:37,575 - INFO - Database connection pool initialized.
+2024-08-21 20:56:17,995 - INFO - Database connection pool initialized.
+2024-08-21 20:56:44,789 - INFO - Database connection pool initialized.
+2024-08-21 20:57:45,960 - INFO - Database connection pool initialized.
+2024-08-21 20:58:33,007 - INFO - Database connection pool initialized.
+2024-08-21 21:20:21,076 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 10061] Connect call failed ('127.0.0.1', 5432), [Errno 10061] Connect call failed ('::1', 5432, 0, 0)
+2024-08-21 21:21:06,706 - INFO - Database connection pool initialized.
+2024-08-21 21:22:16,845 - INFO - Database connection pool initialized.
+2024-08-21 21:22:22,323 - INFO - Database connection pool initialized.
+2024-08-21 21:22:59,119 - INFO - Database connection pool initialized.
+2024-08-21 21:24:36,020 - INFO - Database connection pool initialized.
+2024-08-21 21:27:26,695 - INFO - Database connection pool initialized.
+2024-08-21 21:27:33,846 - INFO - Database connection pool initialized.
+2024-08-21 21:30:43,678 - INFO - Database connection pool initialized.
+2024-08-21 21:32:21,835 - INFO - Database connection pool initialized.
+2024-08-21 21:33:47,929 - INFO - Database connection pool initialized.
+2024-08-21 21:34:33,255 - INFO - Database connection pool initialized.
+2024-08-21 21:34:41,566 - INFO - Database connection pool initialized.
+2024-08-21 21:34:53,227 - INFO - Database connection pool initialized.
+2024-08-21 21:35:23,521 - INFO - Database connection pool initialized.
+2024-08-21 21:37:08,272 - INFO - Database connection pool initialized.
+2024-08-21 21:42:42,682 - INFO - Database connection pool initialized.
+2024-08-21 21:42:53,245 - INFO - Database connection pool initialized.
+2024-08-22 12:31:35,433 - INFO - Database connection pool initialized.
+2024-08-22 12:31:43,180 - INFO - Database connection pool initialized.
+2024-08-22 12:33:50,998 - INFO - Database connection pool initialized.
+2024-08-22 12:34:01,714 - INFO - Database connection pool initialized.
+2024-08-22 12:34:05,615 - INFO - Database connection pool initialized.
+2024-08-22 12:35:53,484 - INFO - Database connection pool initialized.
+2024-08-22 12:43:55,638 - INFO - Database connection pool initialized.
+2024-08-22 12:44:50,805 - INFO - Database connection pool initialized.
+2024-08-22 12:51:16,273 - INFO - Database connection pool initialized.
+2024-08-22 12:54:10,084 - INFO - Database connection pool initialized.
+2024-08-22 12:54:40,031 - INFO - Database connection pool initialized.
+2024-08-22 12:55:29,583 - INFO - Database connection pool initialized.
+2024-08-22 12:59:11,879 - INFO - Database connection pool initialized.
+2024-08-22 13:01:08,103 - INFO - Database connection pool initialized.
+2024-08-22 13:03:42,153 - INFO - Database connection pool initialized.
+2024-08-22 13:06:04,277 - INFO - Database connection pool initialized.
+2024-08-22 13:10:48,281 - INFO - Database connection pool initialized.
+2024-08-22 13:11:48,214 - INFO - Database connection pool initialized.
+2024-08-22 13:12:42,733 - INFO - Database connection pool initialized.
+2024-08-22 13:13:48,355 - INFO - Database connection pool initialized.
+2024-08-22 13:14:14,398 - INFO - Database connection pool initialized.
+2024-08-22 13:14:44,880 - INFO - Database connection pool initialized.
+2024-08-22 13:15:13,315 - INFO - Database connection pool initialized.
+2024-08-22 13:15:21,609 - ERROR - Error in link executor: [Errno 2] No such file or directory: 'token.json'
+2024-08-22 13:16:05,675 - INFO - Database connection pool initialized.
+2024-08-22 13:16:06,853 - ERROR - Error in link executor: [Errno 2] No such file or directory: 'database/data/token.json'
+2024-08-22 13:16:32,554 - INFO - Database connection pool initialized.
+2024-08-22 13:17:07,343 - INFO - Database connection pool initialized.
+2024-08-22 13:17:12,712 - INFO - Database connection pool initialized.
+2024-08-22 13:20:38,172 - INFO - Database connection pool initialized.
+2024-08-22 13:22:42,180 - INFO - Database connection pool initialized.
+2024-08-22 13:25:30,049 - INFO - Database connection pool initialized.
+2024-08-22 13:25:40,290 - ERROR - Error in link executor: 'Link' object has no attribute 'get_queries'
+2024-08-22 13:26:10,564 - INFO - Database connection pool initialized.
+2024-08-22 13:26:11,796 - ERROR - Error while fetching query from Database: sheet name is TestGoogleDock: 'sheet_id'
+2024-08-22 13:26:11,797 - ERROR - Error in link executor: can only join an iterable
+2024-08-22 13:26:43,821 - INFO - Database connection pool initialized.
+2024-08-22 13:26:54,750 - INFO - Database connection pool initialized.
+2024-08-22 13:26:55,318 - ERROR - Error in link executor: sequence item 0: expected str instance, int found
+2024-08-22 13:27:05,419 - INFO - Database connection pool initialized.
+2024-08-22 13:27:06,204 - ERROR - Error in link executor: 'int' object is not subscriptable
+2024-08-22 13:27:12,177 - INFO - Database connection pool initialized.
+2024-08-22 13:27:14,315 - ERROR - Error in link executor: 'sheet_id'
+2024-08-22 13:27:56,215 - INFO - Database connection pool initialized.
+2024-08-22 13:28:04,532 - INFO - Database connection pool initialized.
+2024-08-22 13:28:08,461 - ERROR - Error in link executor: sequence item 0: expected str instance, asyncpg.Record found
+2024-08-22 13:28:20,276 - INFO - Database connection pool initialized.
+2024-08-22 13:28:20,636 - ERROR - Error in link executor: sequence item 0: expected str instance, asyncpg.Record found
+2024-08-22 13:28:44,904 - INFO - Database connection pool initialized.
+2024-08-22 13:28:46,110 - ERROR - Error in link executor: 'sheet_id'
+2024-08-22 13:28:58,190 - INFO - Database connection pool initialized.
+2024-08-22 13:28:58,943 - ERROR - Error in link executor: record index out of range
+2024-08-22 13:30:59,729 - INFO - Database connection pool initialized.
+2024-08-22 13:31:06,426 - INFO - Database connection pool initialized.
+2024-08-22 13:31:07,191 - ERROR - Error in link executor: sequence item 0: expected str instance, asyncpg.Record found
+2024-08-22 13:31:20,716 - INFO - Database connection pool initialized.
+2024-08-22 13:31:21,702 - ERROR - Error in link executor: '1'
+2024-08-22 13:31:30,665 - INFO - Database connection pool initialized.
+2024-08-22 13:31:31,152 - ERROR - Error in link executor: 'sheet_name'
+2024-08-22 13:31:46,012 - INFO - Database connection pool initialized.
+2024-08-22 13:31:54,468 - INFO - Database connection pool initialized.
+2024-08-22 13:31:55,158 - ERROR - Error in link executor: sequence item 0: expected str instance, asyncpg.Record found
+2024-08-22 13:32:10,459 - INFO - Database connection pool initialized.
+2024-08-22 13:33:06,151 - ERROR - Error in link executor: sequence item 0: expected str instance, int found
+2024-08-22 13:34:21,936 - INFO - Database connection pool initialized.
+2024-08-22 13:34:23,668 - ERROR - Error in link executor: sequence item 0: expected str instance, int found
+2024-08-22 13:34:43,091 - INFO - Database connection pool initialized.
+2024-08-22 13:34:46,469 - INFO - Database connection pool initialized.
+2024-08-22 13:34:46,677 - ERROR - Error in link executor: sequence item 0: expected str instance, int found
+2024-08-22 13:34:59,679 - INFO - Database connection pool initialized.
+2024-08-22 13:34:59,886 - ERROR - Error in link executor: sequence item 0: expected str instance, int found
+2024-08-22 13:35:03,959 - ERROR - Error in link executor: sequence item 0: expected str instance, int found
+2024-08-22 13:35:27,471 - INFO - Database connection pool initialized.
+2024-08-22 13:35:28,770 - ERROR - Error in link executor: sequence item 0: expected str instance, int found
+2024-08-22 13:36:32,292 - INFO - Database connection pool initialized.
+2024-08-22 13:36:36,309 - INFO - Database connection pool initialized.
+2024-08-22 13:36:40,439 - ERROR - Error in link executor: sequence item 0: expected str instance, int found
+2024-08-22 13:38:26,807 - INFO - Database connection pool initialized.
+2024-08-22 13:39:26,646 - INFO - Database connection pool initialized.
+2024-08-22 13:42:46,439 - INFO - Database connection pool initialized.
+2024-08-22 13:43:09,642 - INFO - Database connection pool initialized.
+2024-08-22 13:43:38,865 - INFO - Database connection pool initialized.
+2024-08-22 13:45:09,135 - INFO - Database connection pool initialized.
+2024-08-22 13:47:29,002 - INFO - Database connection pool initialized.
+2024-08-22 13:49:47,705 - INFO - Database connection pool initialized.
+2024-08-22 13:50:02,035 - ERROR - Error in link executor: 'int' object is not subscriptable
+2024-08-22 13:53:58,276 - INFO - Database connection pool initialized.
+2024-08-22 13:54:18,396 - ERROR - Error in link executor: list indices must be integers or slices, not str
+2024-08-22 13:54:38,311 - INFO - Database connection pool initialized.
+2024-08-22 13:54:39,546 - ERROR - Error in link executor: 'coroutine' object is not subscriptable
+2024-08-22 13:55:09,091 - INFO - Database connection pool initialized.
+2024-08-22 13:56:08,884 - INFO - Database connection pool initialized.
+2024-08-22 13:56:28,201 - INFO - Database connection pool initialized.
+2024-08-22 13:59:34,291 - INFO - Database connection pool initialized.
+2024-08-22 14:00:20,987 - INFO - Database connection pool initialized.
+2024-08-22 14:01:40,714 - INFO - Database connection pool initialized.
+2024-08-22 14:02:51,769 - INFO - Database connection pool initialized.
+2024-08-22 14:03:07,879 - INFO - Database connection pool initialized.
+2024-08-22 14:04:39,624 - INFO - Database connection pool initialized.
+2024-08-22 14:14:51,561 - INFO - Database connection pool initialized.
+2024-08-22 14:14:53,972 - INFO - Database connection pool initialized.
+2024-08-22 14:16:58,488 - INFO - Database connection pool initialized.
+2024-08-22 14:25:17,247 - INFO - Database connection pool initialized.
+2024-08-22 14:31:07,069 - INFO - 9 cells appended.
+2024-08-22 14:31:29,855 - INFO - Database connection pool initialized.
+2024-08-22 14:31:38,382 - INFO - 9 cells appended.
+2024-08-22 14:32:11,303 - INFO - Database connection pool initialized.
+2024-08-22 14:32:18,441 - INFO - 9 cells appended.
+2024-08-22 14:34:25,049 - INFO - Database connection pool initialized.
+2024-08-22 14:34:41,614 - INFO - 9 cells appended.
+2024-08-22 14:34:52,421 - INFO - 9 cells appended.
+2024-08-22 14:35:02,349 - INFO - 9 cells appended.
+2024-08-22 14:35:21,001 - INFO - Database connection pool initialized.
+2024-08-22 14:35:26,881 - INFO - 9 cells appended.
+2024-08-22 14:38:44,173 - INFO - Database connection pool initialized.
+2024-08-22 14:39:46,435 - INFO - Database connection pool initialized.
+2024-08-22 14:39:51,540 - INFO - 9 cells appended.
+2024-08-22 14:40:01,111 - INFO - 9 cells appended.
+2024-08-22 14:43:11,810 - INFO - A sheet with the name 'iphone' already exists.
+2024-08-22 14:43:12,837 - INFO - Existing data cleared.
+2024-08-22 14:43:15,135 - INFO - 9 cells appended.
+2024-08-22 14:43:17,905 - INFO - 9 cells appended.
+2024-08-22 14:43:21,862 - INFO - 9 cells appended.
+2024-08-22 14:46:16,853 - INFO - Database connection pool initialized.
+2024-08-22 17:21:24,147 - INFO - Database connection pool initialized.
+2024-08-22 17:30:05,625 - INFO - Database connection pool initialized.
+2024-08-22 17:31:32,579 - INFO - Database connection pool initialized.
+2024-08-22 17:36:00,942 - INFO - Database connection pool initialized.
+2024-08-22 17:36:47,640 - INFO - Database connection pool initialized.
+2024-08-22 17:37:21,612 - INFO - Database connection pool initialized.
+2024-08-22 17:38:20,452 - INFO - Database connection pool initialized.
+2024-08-22 17:42:31,282 - INFO - Database connection pool initialized.
+2024-08-22 18:19:07,072 - INFO - Database connection pool initialized.
+2024-08-22 18:19:29,011 - ERROR - Failed to fetch data: invalid input for query argument $2: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:19:29,011 - ERROR - Error while inserting Seller in Database: invalid input for query argument $2: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:21:29,644 - INFO - Database connection pool initialized.
+2024-08-22 18:21:41,373 - ERROR - Failed to execute query: invalid input for query argument $2: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:21:41,374 - ERROR - Error while inserting Seller in Database: invalid input for query argument $2: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:22:04,667 - ERROR - Error in parsing Seller: 'GoogleSheets' object has no attribute 'get_google_sheet_db'
+2024-08-22 18:22:46,343 - INFO - Database connection pool initialized.
+2024-08-22 18:22:57,359 - ERROR - Failed to fetch data: invalid input for query argument $1: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:22:57,359 - ERROR - Error while fetching Seller from Database: invalid input for query argument $1: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:22:57,359 - ERROR - Error in parsing Seller: 'GoogleSheets' object has no attribute 'get_google_sheet_db'
+2024-08-22 18:26:48,262 - INFO - Database connection pool initialized.
+2024-08-22 18:26:55,715 - ERROR - Failed to fetch data: invalid input for query argument $1: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:26:55,715 - ERROR - Error while fetching Seller from Database: invalid input for query argument $1: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:26:58,684 - INFO - Sheet 'Apple Juicy' created successfully.
+2024-08-22 18:26:58,684 - ERROR - Error in parsing Seller: 'NoneType' object is not subscriptable
+2024-08-22 18:27:38,478 - ERROR - Failed to execute query: invalid input for query argument $2: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:27:38,478 - ERROR - Error while inserting Seller in Database: invalid input for query argument $2: 'Apple Juicy' ('str' object cannot be interpreted as an integer)
+2024-08-22 18:29:20,307 - INFO - Database connection pool initialized.
+2024-08-22 18:31:52,603 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 18:31:53,674 - INFO - Existing data cleared.
+2024-08-22 18:31:53,675 - ERROR - Failed to fetch data: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:31:53,676 - ERROR - Error while fetching link from Database: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:50:52,659 - INFO - Database connection pool initialized.
+2024-08-22 18:51:26,120 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 18:51:27,204 - INFO - Existing data cleared.
+2024-08-22 18:51:27,205 - ERROR - Failed to fetch data: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:51:27,205 - ERROR - Error while fetching link from Database: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:52:09,374 - INFO - Database connection pool initialized.
+2024-08-22 18:52:20,259 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 18:52:21,277 - INFO - Existing data cleared.
+2024-08-22 18:52:21,280 - ERROR - Failed to fetch data: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:52:21,280 - ERROR - Error while fetching link from Database: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:55:56,447 - INFO - Database connection pool initialized.
+2024-08-22 18:56:15,642 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 18:56:16,664 - INFO - Existing data cleared.
+2024-08-22 18:56:16,667 - ERROR - Failed to fetch data: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:56:16,667 - ERROR - Error while fetching link from Database: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:57:23,659 - INFO - Database connection pool initialized.
+2024-08-22 18:57:38,471 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 18:57:39,484 - INFO - Existing data cleared.
+2024-08-22 18:57:39,485 - ERROR - Failed to fetch data: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:57:39,485 - ERROR - Error while fetching link from Database: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:58:32,547 - INFO - Database connection pool initialized.
+2024-08-22 18:58:44,565 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 18:58:45,554 - INFO - Existing data cleared.
+2024-08-22 18:58:45,560 - ERROR - Failed to fetch data: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:58:45,561 - ERROR - Error while fetching link from Database: invalid input for query argument $1: 'https://www.avito.ru/brands/applejuicy/... ('str' object cannot be interpreted as an integer)
+2024-08-22 18:59:00,149 - INFO - Database connection pool initialized.
+2024-08-22 18:59:09,080 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 18:59:10,054 - INFO - Existing data cleared.
+2024-08-22 18:59:15,079 - INFO - 2 cells appended.
+2024-08-22 19:11:08,874 - INFO - Database connection pool initialized.
+2024-08-22 19:11:24,428 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:11:25,013 - INFO - Existing data cleared.
+2024-08-22 19:11:25,013 - ERROR - Error in parsing Seller: 'id'
+2024-08-22 19:12:20,869 - INFO - Database connection pool initialized.
+2024-08-22 19:12:31,254 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:12:32,296 - INFO - Existing data cleared.
+2024-08-22 19:12:32,296 - ERROR - Error in parsing Seller: 'id'
+2024-08-22 19:13:21,054 - INFO - Database connection pool initialized.
+2024-08-22 19:13:30,930 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:13:31,943 - INFO - Existing data cleared.
+2024-08-22 19:13:31,943 - ERROR - 'Parser' object has no attribute 'query'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 27, in parse_links
+    query_id = await db_queries.get_id_by_query(self.query)
+AttributeError: 'Parser' object has no attribute 'query'
+2024-08-22 19:14:31,016 - INFO - Database connection pool initialized.
+2024-08-22 19:14:37,543 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:14:38,651 - INFO - Existing data cleared.
+2024-08-22 19:14:38,651 - ERROR - 'Parser' object has no attribute 'query'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 52, in parse_links
+    targetUrl = self.query + f'&p={page}'
+AttributeError: 'Parser' object has no attribute 'query'
+2024-08-22 19:18:50,982 - INFO - Database connection pool initialized.
+2024-08-22 19:19:01,297 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:19:02,301 - INFO - Existing data cleared.
+2024-08-22 19:19:04,612 - ERROR - Couldn't find a tree builder with the features you requested: html.parser_base. Do you need to install a parser library?
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 61, in parse_links
+    html = BeautifulSoup(response.text, 'html.parser_base')
+  File "C:\Users\yustu\ParserBack\ParserBack\.venv\lib\site-packages\bs4\__init__.py", line 250, in __init__
+    raise FeatureNotFound(
+bs4.FeatureNotFound: Couldn't find a tree builder with the features you requested: html.parser_base. Do you need to install a parser library?
+2024-08-22 19:19:49,482 - INFO - Database connection pool initialized.
+2024-08-22 19:20:02,422 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:20:03,456 - INFO - Existing data cleared.
+2024-08-22 19:20:05,735 - ERROR - Link.save_seller_links_db() got an unexpected keyword argument 'url'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 81, in parse_links
+    await db_links.save_seller_links_db(seller_id=self.seller_id, url="https://www.avito.ru" + href)
+TypeError: Link.save_seller_links_db() got an unexpected keyword argument 'url'
+2024-08-22 19:20:45,610 - INFO - Database connection pool initialized.
+2024-08-22 19:20:55,589 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:20:56,641 - INFO - Existing data cleared.
+2024-08-22 19:20:58,188 - ERROR - Error in parsing Seller: Link.get_links() takes 1 positional argument but 2 were given
+2024-08-22 19:21:57,638 - INFO - Database connection pool initialized.
+2024-08-22 19:22:07,608 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:22:08,631 - INFO - Existing data cleared.
+2024-08-22 19:22:09,928 - ERROR - Error in parsing Seller: Link.get_links() takes 1 positional argument but 2 were given
+2024-08-22 19:22:56,283 - INFO - Database connection pool initialized.
+2024-08-22 19:23:05,526 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:23:06,548 - INFO - Existing data cleared.
+2024-08-22 19:23:11,892 - INFO - 9 cells appended.
+2024-08-22 19:23:13,435 - INFO - 9 cells appended.
+2024-08-22 19:23:16,203 - INFO - 9 cells appended.
+2024-08-22 19:23:20,103 - INFO - 9 cells appended.
+2024-08-22 19:23:24,475 - INFO - 9 cells appended.
+2024-08-22 19:23:30,482 - INFO - 9 cells appended.
+2024-08-22 19:23:32,597 - INFO - 9 cells appended.
+2024-08-22 19:23:35,644 - INFO - 9 cells appended.
+2024-08-22 19:23:39,168 - INFO - 9 cells appended.
+2024-08-22 19:23:42,369 - INFO - 9 cells appended.
+2024-08-22 19:23:44,769 - INFO - 9 cells appended.
+2024-08-22 19:23:47,047 - INFO - 9 cells appended.
+2024-08-22 19:24:45,438 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:24:46,491 - INFO - Existing data cleared.
+2024-08-22 19:24:50,961 - INFO - 9 cells appended.
+2024-08-22 19:24:53,108 - INFO - 9 cells appended.
+2024-08-22 19:24:55,809 - INFO - 9 cells appended.
+2024-08-22 19:24:57,893 - INFO - 9 cells appended.
+2024-08-22 19:24:59,634 - INFO - 9 cells appended.
+2024-08-22 19:25:17,115 - INFO - 9 cells appended.
+2024-08-22 19:25:20,691 - INFO - 9 cells appended.
+2024-08-22 19:25:23,244 - INFO - 9 cells appended.
+2024-08-22 19:25:25,433 - INFO - 9 cells appended.
+2024-08-22 19:25:27,386 - INFO - 9 cells appended.
+2024-08-22 19:25:29,318 - INFO - 9 cells appended.
+2024-08-22 19:25:30,848 - INFO - 9 cells appended.
+2024-08-22 19:35:11,992 - INFO - Database connection pool initialized.
+2024-08-22 19:35:37,701 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:35:38,255 - INFO - Existing data cleared.
+2024-08-22 19:36:37,441 - INFO - Database connection pool initialized.
+2024-08-22 19:36:50,149 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:36:50,699 - INFO - Existing data cleared.
+2024-08-22 19:36:58,231 - INFO - 9 cells appended.
+2024-08-22 19:37:01,238 - INFO - 9 cells appended.
+2024-08-22 19:37:04,176 - INFO - 9 cells appended.
+2024-08-22 19:37:06,731 - INFO - 9 cells appended.
+2024-08-22 19:37:38,785 - INFO - 9 cells appended.
+2024-08-22 19:37:44,722 - INFO - 9 cells appended.
+2024-08-22 19:38:14,370 - INFO - Database connection pool initialized.
+2024-08-22 19:38:47,502 - INFO - Database connection pool initialized.
+2024-08-22 19:39:11,813 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:39:12,300 - INFO - Existing data cleared.
+2024-08-22 19:39:20,225 - WARNING - <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1ir7nhHiXWAeLk6GAgke8d6s4_w5XFq__nYaDOTKFiH4/values/Apple%20Juicy%21A0%3AH0:append?valueInputOption=USER_ENTERED&alt=json returned "Unable to parse range: Apple Juicy!A0:H0". Details: "Unable to parse range: Apple Juicy!A0:H0">
+2024-08-22 19:39:22,599 - INFO - 9 cells appended.
+2024-08-22 19:39:25,600 - INFO - 9 cells appended.
+2024-08-22 19:39:28,116 - INFO - 9 cells appended.
+2024-08-22 19:39:30,125 - INFO - 9 cells appended.
+2024-08-22 19:39:32,348 - INFO - 9 cells appended.
+2024-08-22 19:39:34,283 - INFO - 9 cells appended.
+2024-08-22 19:39:37,478 - INFO - 9 cells appended.
+2024-08-22 19:39:39,572 - INFO - 9 cells appended.
+2024-08-22 19:39:42,530 - INFO - 9 cells appended.
+2024-08-22 19:39:56,611 - INFO - 9 cells appended.
+2024-08-22 19:39:58,901 - INFO - 9 cells appended.
+2024-08-22 19:40:01,162 - INFO - 9 cells appended.
+2024-08-22 19:40:03,822 - INFO - 9 cells appended.
+2024-08-22 19:40:17,025 - INFO - 9 cells appended.
+2024-08-22 19:40:19,043 - INFO - 9 cells appended.
+2024-08-22 19:40:21,709 - INFO - 9 cells appended.
+2024-08-22 19:40:24,019 - INFO - 9 cells appended.
+2024-08-22 19:40:25,977 - INFO - 9 cells appended.
+2024-08-22 19:40:29,135 - INFO - 9 cells appended.
+2024-08-22 19:40:32,073 - INFO - 9 cells appended.
+2024-08-22 19:40:35,559 - INFO - 9 cells appended.
+2024-08-22 19:40:37,744 - INFO - 9 cells appended.
+2024-08-22 19:40:40,449 - INFO - 9 cells appended.
+2024-08-22 19:40:43,651 - WARNING - <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1ir7nhHiXWAeLk6GAgke8d6s4_w5XFq__nYaDOTKFiH4/values/Apple%20Juicy%21A0%3AH0:append?valueInputOption=USER_ENTERED&alt=json returned "Unable to parse range: Apple Juicy!A0:H0". Details: "Unable to parse range: Apple Juicy!A0:H0">
+2024-08-22 19:40:46,628 - INFO - 9 cells appended.
+2024-08-22 19:41:04,174 - INFO - 9 cells appended.
+2024-08-22 19:41:07,009 - INFO - 9 cells appended.
+2024-08-22 19:41:35,342 - INFO - 9 cells appended.
+2024-08-22 19:41:37,702 - INFO - 9 cells appended.
+2024-08-22 19:41:39,879 - INFO - 9 cells appended.
+2024-08-22 19:41:42,267 - INFO - 9 cells appended.
+2024-08-22 19:41:44,637 - INFO - 9 cells appended.
+2024-08-22 19:42:02,478 - INFO - 9 cells appended.
+2024-08-22 19:42:04,421 - INFO - 9 cells appended.
+2024-08-22 19:42:22,867 - INFO - 9 cells appended.
+2024-08-22 19:42:41,315 - INFO - 9 cells appended.
+2024-08-22 19:42:43,618 - INFO - 9 cells appended.
+2024-08-22 19:42:45,768 - INFO - 9 cells appended.
+2024-08-22 19:42:47,731 - INFO - 9 cells appended.
+2024-08-22 19:43:01,477 - INFO - 9 cells appended.
+2024-08-22 19:43:03,683 - INFO - 9 cells appended.
+2024-08-22 19:43:06,542 - INFO - 9 cells appended.
+2024-08-22 19:43:15,648 - INFO - Database connection pool initialized.
+2024-08-22 19:43:23,355 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-22 19:43:23,853 - INFO - Existing data cleared.
+2024-08-22 19:43:40,495 - WARNING - <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1ir7nhHiXWAeLk6GAgke8d6s4_w5XFq__nYaDOTKFiH4/values/Apple%20Juicy%21ANone%3AHNone:append?valueInputOption=USER_ENTERED&alt=json returned "Unable to parse range: Apple Juicy!ANone:HNone". Details: "Unable to parse range: Apple Juicy!ANone:HNone">
+2024-08-22 19:43:42,712 - WARNING - <HttpError 400 when requesting https://sheets.googleapis.com/v4/spreadsheets/1ir7nhHiXWAeLk6GAgke8d6s4_w5XFq__nYaDOTKFiH4/values/Apple%20Juicy%21ANone%3AHNone:append?valueInputOption=USER_ENTERED&alt=json returned "Unable to parse range: Apple Juicy!ANone:HNone". Details: "Unable to parse range: Apple Juicy!ANone:HNone">
+2024-08-22 19:43:51,960 - INFO - Database connection pool initialized.
+2024-08-22 19:44:52,828 - INFO - Database connection pool initialized.
+2024-08-22 19:46:51,335 - INFO - Database connection pool initialized.
+2024-08-22 20:02:05,566 - INFO - Database connection pool initialized.
+2024-08-22 20:02:09,696 - ERROR - Failed to execute query: invalid input for query argument $2: False (expected str, got bool)
+2024-08-22 20:02:09,696 - ERROR - Error while inserting Seller in Database: invalid input for query argument $2: False (expected str, got bool)
+2024-08-22 20:03:33,124 - ERROR - Error in parsing Seller: list index out of range
+2024-08-22 20:05:23,685 - INFO - Database connection pool initialized.
+2024-08-22 20:05:39,416 - INFO - Existing data cleared.
+2024-08-22 20:06:03,850 - INFO - Database connection pool initialized.
+2024-08-22 20:06:14,844 - INFO - Existing data cleared.
+2024-08-22 20:07:12,625 - INFO - Database connection pool initialized.
+2024-08-22 20:07:28,601 - INFO - Existing data cleared.
+2024-08-22 20:07:33,916 - INFO - 10 cells appended.
+2024-08-22 20:07:36,140 - INFO - 10 cells appended.
+2024-08-22 20:07:38,347 - INFO - 10 cells appended.
+2024-08-22 20:07:55,489 - INFO - 10 cells appended.
+2024-08-22 20:07:59,799 - INFO - 10 cells appended.
+2024-08-22 20:08:01,928 - INFO - 10 cells appended.
+2024-08-22 20:08:04,529 - INFO - 10 cells appended.
+2024-08-22 20:08:07,113 - INFO - 10 cells appended.
+2024-08-22 20:08:08,674 - INFO - 10 cells appended.
+2024-08-22 20:08:12,110 - INFO - 10 cells appended.
+2024-08-22 20:08:14,358 - INFO - 10 cells appended.
+2024-08-22 20:08:16,480 - INFO - 10 cells appended.
+2024-08-22 20:08:22,648 - INFO - 10 cells appended.
+2024-08-22 20:08:26,441 - INFO - 10 cells appended.
+2024-08-22 20:08:29,210 - INFO - 10 cells appended.
+2024-08-22 20:08:32,684 - INFO - 10 cells appended.
+2024-08-22 20:08:35,233 - INFO - 10 cells appended.
+2024-08-22 20:08:36,864 - INFO - 10 cells appended.
+2024-08-22 20:08:39,682 - INFO - 10 cells appended.
+2024-08-22 20:08:41,313 - INFO - 10 cells appended.
+2024-08-22 20:08:45,231 - INFO - 10 cells appended.
+2024-08-22 20:08:49,361 - INFO - 10 cells appended.
+2024-08-22 20:08:55,865 - INFO - 10 cells appended.
+2024-08-22 20:09:00,496 - INFO - 10 cells appended.
+2024-08-22 20:09:18,417 - INFO - 10 cells appended.
+2024-08-22 20:09:20,001 - INFO - 10 cells appended.
+2024-08-22 20:09:21,659 - INFO - 10 cells appended.
+2024-08-22 20:09:23,924 - INFO - 10 cells appended.
+2024-08-22 20:09:43,868 - INFO - 10 cells appended.
+2024-08-22 20:09:46,998 - INFO - 10 cells appended.
+2024-08-22 20:09:49,023 - INFO - 10 cells appended.
+2024-08-22 20:09:50,663 - INFO - 10 cells appended.
+2024-08-22 20:09:52,578 - INFO - 10 cells appended.
+2024-08-22 20:09:54,989 - INFO - 10 cells appended.
+2024-08-22 20:09:57,248 - INFO - 10 cells appended.
+2024-08-22 20:10:02,307 - INFO - 10 cells appended.
+2024-08-22 20:10:07,340 - INFO - 10 cells appended.
+2024-08-22 20:10:08,903 - INFO - 10 cells appended.
+2024-08-22 20:10:13,018 - INFO - 10 cells appended.
+2024-08-22 20:10:14,589 - INFO - 10 cells appended.
+2024-08-22 20:10:17,056 - INFO - 10 cells appended.
+2024-08-22 20:10:20,858 - INFO - 10 cells appended.
+2024-08-22 20:10:23,640 - INFO - 10 cells appended.
+2024-08-22 20:10:27,768 - INFO - 10 cells appended.
+2024-08-22 20:10:30,305 - INFO - 10 cells appended.
+2024-08-22 20:10:32,732 - INFO - 10 cells appended.
+2024-08-22 20:10:34,022 - INFO - 10 cells appended.
+2024-08-22 20:10:35,285 - INFO - 10 cells appended.
+2024-08-22 20:10:41,449 - INFO - 10 cells appended.
+2024-08-22 20:10:43,615 - INFO - 10 cells appended.
+2024-08-22 20:10:48,012 - INFO - 10 cells appended.
+2024-08-22 20:11:06,096 - INFO - 10 cells appended.
+2024-08-22 20:11:08,628 - INFO - 10 cells appended.
+2024-08-22 20:11:10,367 - INFO - 10 cells appended.
+2024-08-22 20:11:12,550 - INFO - 10 cells appended.
+2024-08-22 20:11:16,893 - INFO - 10 cells appended.
+2024-08-22 20:11:18,736 - INFO - 10 cells appended.
+2024-08-22 20:11:21,731 - INFO - 10 cells appended.
+2024-08-22 20:11:24,525 - INFO - 10 cells appended.
+2024-08-22 20:11:27,865 - INFO - 10 cells appended.
+2024-08-22 20:11:32,041 - INFO - 10 cells appended.
+2024-08-22 20:11:50,710 - INFO - Database connection pool initialized.
+2024-08-22 20:21:59,994 - INFO - Database connection pool initialized.
+2024-08-22 20:22:20,590 - INFO - Existing data cleared.
+2024-08-22 20:22:34,593 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,593 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,594 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,594 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,595 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,596 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,596 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,597 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,598 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,599 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,599 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,600 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,601 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,601 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,601 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,601 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,602 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,603 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,603 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,604 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,604 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,605 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,605 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:22:34,606 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:24:03,249 - INFO - Database connection pool initialized.
+2024-08-22 20:24:15,563 - INFO - Existing data cleared.
+2024-08-22 20:26:32,592 - INFO - Database connection pool initialized.
+2024-08-22 20:27:07,156 - INFO - Existing data cleared.
+2024-08-22 20:27:25,072 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,072 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,073 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,074 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,074 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,075 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,075 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,076 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,077 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,077 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,078 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,078 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,078 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,079 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,080 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,080 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,081 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,081 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,082 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,082 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,083 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,084 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,084 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:27:25,085 - ERROR - Error while counting links from Database: list indices must be integers or slices, not str
+2024-08-22 20:28:13,090 - INFO - Database connection pool initialized.
+2024-08-22 20:28:27,310 - INFO - Existing data cleared.
+2024-08-22 20:28:34,968 - INFO - 9 cells appended.
+2024-08-22 20:28:37,308 - INFO - 9 cells appended.
+2024-08-22 20:28:41,599 - INFO - 9 cells appended.
+2024-08-22 20:28:44,004 - INFO - 9 cells appended.
+2024-08-22 20:28:47,504 - INFO - 9 cells appended.
+2024-08-22 20:28:50,224 - INFO - 9 cells appended.
+2024-08-22 20:28:52,523 - INFO - 9 cells appended.
+2024-08-22 20:28:55,742 - INFO - 9 cells appended.
+2024-08-22 20:28:58,525 - INFO - 9 cells appended.
+2024-08-22 20:29:02,369 - INFO - 9 cells appended.
+2024-08-22 20:29:05,637 - INFO - 9 cells appended.
+2024-08-22 20:29:10,480 - INFO - 9 cells appended.
+2024-08-22 20:29:24,333 - INFO - 9 cells appended.
+2024-08-22 20:29:26,575 - INFO - 9 cells appended.
+2024-08-22 20:29:30,029 - INFO - 9 cells appended.
+2024-08-22 20:29:33,834 - INFO - 9 cells appended.
+2024-08-22 20:29:36,630 - INFO - 9 cells appended.
+2024-08-22 20:29:40,630 - INFO - 9 cells appended.
+2024-08-22 20:29:44,642 - INFO - 9 cells appended.
+2024-08-22 20:29:46,857 - INFO - 9 cells appended.
+2024-08-22 20:29:49,693 - INFO - 9 cells appended.
+2024-08-22 20:30:09,083 - INFO - 9 cells appended.
+2024-08-22 20:30:11,165 - INFO - 9 cells appended.
+2024-08-22 20:30:15,728 - INFO - 9 cells appended.
+2024-08-22 20:30:35,547 - INFO - 9 cells appended.
+2024-08-22 20:30:42,408 - INFO - 9 cells appended.
+2024-08-22 20:30:45,084 - INFO - 9 cells appended.
+2024-08-22 20:30:47,127 - INFO - 9 cells appended.
+2024-08-22 20:30:50,920 - INFO - 9 cells appended.
+2024-08-22 20:30:53,598 - INFO - 9 cells appended.
+2024-08-22 20:30:57,434 - INFO - 9 cells appended.
+2024-08-22 20:31:00,064 - INFO - 9 cells appended.
+2024-08-22 20:31:03,794 - INFO - 9 cells appended.
+2024-08-22 20:31:06,981 - INFO - 9 cells appended.
+2024-08-22 20:31:09,156 - INFO - 9 cells appended.
+2024-08-22 20:31:11,327 - INFO - 9 cells appended.
+2024-08-22 20:31:13,336 - INFO - 9 cells appended.
+2024-08-22 20:31:17,355 - INFO - 9 cells appended.
+2024-08-22 20:31:19,746 - INFO - 9 cells appended.
+2024-08-22 20:31:23,654 - INFO - 9 cells appended.
+2024-08-22 20:31:28,823 - INFO - 9 cells appended.
+2024-08-22 20:31:43,839 - INFO - 9 cells appended.
+2024-08-22 20:31:46,380 - INFO - 9 cells appended.
+2024-08-22 20:31:48,929 - INFO - 9 cells appended.
+2024-08-22 20:31:51,529 - INFO - 9 cells appended.
+2024-08-22 20:31:54,919 - INFO - 9 cells appended.
+2024-08-22 20:32:00,237 - INFO - 9 cells appended.
+2024-08-22 20:32:05,839 - INFO - 9 cells appended.
+2024-08-22 20:32:08,982 - INFO - 9 cells appended.
+2024-08-22 20:32:12,550 - INFO - 9 cells appended.
+2024-08-22 20:32:15,756 - INFO - 9 cells appended.
+2024-08-22 20:32:19,337 - INFO - 9 cells appended.
+2024-08-22 20:32:22,569 - INFO - 9 cells appended.
+2024-08-22 20:32:28,011 - INFO - 9 cells appended.
+2024-08-22 20:32:30,687 - INFO - 9 cells appended.
+2024-08-22 20:32:33,250 - INFO - 9 cells appended.
+2024-08-22 21:33:34,122 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 10061] Connect call failed ('127.0.0.1', 5432), [Errno 10061] Connect call failed ('::1', 5432, 0, 0)
+2024-08-22 21:36:03,140 - INFO - Database connection pool initialized.
+2024-08-22 21:40:51,536 - INFO - Database connection pool initialized.
+2024-08-22 21:41:02,926 - INFO - Database connection pool initialized.
+2024-08-22 21:42:01,495 - INFO - Existing data cleared.
+2024-08-22 21:42:02,404 - ERROR - Error in parsing Seller: process_link() got an unexpected keyword argument 'url'
+2024-08-22 21:42:17,113 - INFO - Database connection pool initialized.
+2024-08-22 21:42:20,415 - INFO - Existing data cleared.
+2024-08-22 21:42:25,058 - INFO - 10 cells appended.
+2024-08-22 21:42:27,726 - INFO - 10 cells appended.
+2024-08-22 21:42:30,416 - INFO - 10 cells appended.
+2024-08-22 21:42:32,656 - INFO - 10 cells appended.
+2024-08-22 21:42:35,016 - INFO - 10 cells appended.
+2024-08-22 21:42:37,690 - INFO - 10 cells appended.
+2024-08-22 21:42:54,824 - INFO - 10 cells appended.
+2024-08-22 21:43:02,136 - INFO - Database connection pool initialized.
+2024-08-22 21:43:29,242 - INFO - Existing data cleared.
+2024-08-22 21:43:34,389 - INFO - 10 cells appended.
+2024-08-22 21:43:37,749 - INFO - 10 cells appended.
+2024-08-22 21:43:41,593 - INFO - 10 cells appended.
+2024-08-22 21:43:43,763 - INFO - 10 cells appended.
+2024-08-22 21:43:46,527 - INFO - 10 cells appended.
+2024-08-22 21:43:48,787 - INFO - 10 cells appended.
+2024-08-22 21:43:50,765 - INFO - 10 cells appended.
+2024-08-22 21:44:07,893 - INFO - 10 cells appended.
+2024-08-22 21:44:10,991 - INFO - 10 cells appended.
+2024-08-22 21:44:13,087 - INFO - 10 cells appended.
+2024-08-22 21:44:15,078 - INFO - 9 cells appended.
+2024-08-22 21:44:17,847 - INFO - 9 cells appended.
+2024-08-22 21:49:19,942 - INFO - Database connection pool initialized.
+2024-08-22 21:49:51,016 - INFO - Database connection pool initialized.
+2024-08-22 21:50:07,142 - INFO - Database connection pool initialized.
+2024-08-22 21:50:50,023 - INFO - Database connection pool initialized.
+2024-08-22 21:53:09,190 - INFO - Database connection pool initialized.
+2024-08-23 14:18:18,027 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 10061] Connect call failed ('127.0.0.1', 5432), [Errno 10061] Connect call failed ('::1', 5432, 0, 0)
+2024-08-23 14:18:25,149 - INFO - Database connection pool initialized.
+2024-08-23 14:31:32,796 - ERROR - Error in link executor: process_link() got an unexpected keyword argument 'url'
+2024-08-23 14:33:29,452 - INFO - Database connection pool initialized.
+2024-08-23 14:34:03,331 - INFO - Database connection pool initialized.
+2024-08-23 14:38:38,649 - INFO - Database connection pool initialized.
+2024-08-23 14:38:51,458 - INFO - 10 cells appended.
+2024-08-23 14:42:29,310 - INFO - Database connection pool initialized.
+2024-08-23 14:42:36,270 - INFO - 10 cells appended.
+2024-08-23 14:43:47,889 - INFO - Database connection pool initialized.
+2024-08-23 14:45:15,193 - INFO - Database connection pool initialized.
+2024-08-23 14:47:22,437 - INFO - 10 cells appended.
+2024-08-23 14:54:33,356 - INFO - Database connection pool initialized.
+2024-08-23 15:08:36,357 - INFO - Database connection pool initialized.
+2024-08-23 15:23:17,961 - INFO - 10 cells appended.
+2024-08-23 15:50:03,207 - INFO - Database connection pool initialized.
+2024-08-23 15:58:56,843 - INFO - Database connection pool initialized.
+2024-08-23 15:59:39,126 - INFO - Database connection pool initialized.
+2024-08-23 16:00:40,447 - INFO - Database connection pool initialized.
+2024-08-23 16:00:44,168 - ERROR - Failed to fetch data: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:00:44,168 - ERROR - Error while fetching query from Database: query 1: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:00:44,169 - ERROR - 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 26, in parse_links
+    query_id = query_id[0]['id']
+TypeError: 'NoneType' object is not subscriptable
+2024-08-23 16:00:48,058 - ERROR - Failed to fetch data: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:00:48,058 - ERROR - Error while fetching query from Database: query 1: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:00:48,058 - ERROR - 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 26, in parse_links
+    query_id = query_id[0]['id']
+TypeError: 'NoneType' object is not subscriptable
+2024-08-23 16:00:51,129 - ERROR - Failed to fetch data: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:00:51,130 - ERROR - Error while fetching query from Database: query 1: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:00:51,130 - ERROR - 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 26, in parse_links
+    query_id = query_id[0]['id']
+TypeError: 'NoneType' object is not subscriptable
+2024-08-23 16:01:16,888 - ERROR - Failed to fetch data: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:01:16,888 - ERROR - Error while fetching query from Database: query 1: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:01:16,888 - ERROR - 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 26, in parse_links
+    query_id = query_id[0]['id']
+TypeError: 'NoneType' object is not subscriptable
+2024-08-23 16:01:42,202 - INFO - Database connection pool initialized.
+2024-08-23 16:01:47,766 - INFO - Database connection pool initialized.
+2024-08-23 16:02:11,206 - INFO - Database connection pool initialized.
+2024-08-23 16:02:21,965 - ERROR - Failed to fetch data: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:02:21,966 - ERROR - Error while fetching query from Database: query 1: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:02:21,966 - ERROR - 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 26, in parse_links
+    query_id = query_id[0]['id']
+TypeError: 'NoneType' object is not subscriptable
+2024-08-23 16:03:02,565 - ERROR - Failed to fetch data: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:03:02,566 - ERROR - Error while fetching query from Database: query 1: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:03:02,566 - ERROR - 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 26, in parse_links
+    query_id = query_id[0]['id']
+TypeError: 'NoneType' object is not subscriptable
+2024-08-23 16:05:28,307 - INFO - Database connection pool initialized.
+2024-08-23 16:05:41,874 - ERROR - Failed to fetch data: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:05:41,874 - ERROR - Error while fetching query from Database: query 1: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:05:41,874 - ERROR - 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 27, in parse_links
+    query_id = query_id[0]['id']
+TypeError: 'NoneType' object is not subscriptable
+2024-08-23 16:08:33,937 - INFO - Database connection pool initialized.
+2024-08-23 16:08:46,458 - ERROR - Failed to fetch data: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:08:46,459 - ERROR - Error while fetching query from Database: query 1: invalid input for query argument $1: 1 (expected str, got int)
+2024-08-23 16:08:46,459 - ERROR - 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 27, in parse_links
+    query_id = query_id[0]['id']
+TypeError: 'NoneType' object is not subscriptable
+2024-08-23 16:10:41,282 - INFO - Database connection pool initialized.
+2024-08-23 16:11:07,932 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 36, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-23 16:11:42,463 - INFO - Database connection pool initialized.
+2024-08-23 16:11:52,789 - INFO - Database connection pool initialized.
+2024-08-23 16:12:08,924 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 37, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-23 16:13:21,756 - INFO - Database connection pool initialized.
+2024-08-23 16:13:39,373 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 37, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-23 16:13:55,211 - INFO - Database connection pool initialized.
+2024-08-23 16:15:30,470 - INFO - Database connection pool initialized.
+2024-08-23 16:15:44,497 - ERROR - list index out of range
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 27, in parse_links
+    query_id = query_id[0]['id']
+IndexError: list index out of range
+2024-08-23 16:16:03,853 - INFO - Database connection pool initialized.
+2024-08-23 16:16:16,098 - ERROR - list index out of range
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 27, in parse_links
+    query_id = query_id[0]['id']
+IndexError: list index out of range
+2024-08-23 16:16:36,625 - INFO - Database connection pool initialized.
+2024-08-23 16:16:45,258 - ERROR - list index out of range
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 28, in parse_links
+    query_id = query_id[0]['id']
+IndexError: list index out of range
+2024-08-23 16:17:45,558 - INFO - Database connection pool initialized.
+2024-08-23 16:26:01,637 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "C:\Users\yustu\ParserBack\ParserBack\app\core\parser\parser.py", line 39, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-08-23 16:33:28,576 - INFO - Database connection pool initialized.
+2024-08-23 16:33:41,008 - INFO - Database connection pool initialized.
+2024-08-23 16:34:17,489 - INFO - Database connection pool initialized.
+2024-08-23 16:34:19,204 - INFO - Database connection pool initialized.
+2024-08-23 16:37:05,936 - INFO - Database connection pool initialized.
+2024-08-23 16:38:04,214 - INFO - Database connection pool initialized.
+2024-08-23 16:39:12,230 - INFO - Database connection pool initialized.
+2024-08-23 16:39:47,375 - INFO - Database connection pool initialized.
+2024-08-23 17:16:34,415 - ERROR - Error while fetching query from Database: sheet name is exec_TestGoogleDock: list index out of range
+2024-08-23 17:23:40,233 - INFO - Database connection pool initialized.
+2024-08-23 17:28:43,273 - INFO - Database connection pool initialized.
+2024-08-23 17:30:52,657 - INFO - Database connection pool initialized.
+2024-08-23 17:31:18,839 - INFO - Database connection pool initialized.
+2024-08-23 17:31:40,711 - ERROR - Error in link executor: 'NoneType' object is not subscriptable
+2024-08-23 17:36:03,982 - ERROR - Error in link executor: 'NoneType' object is not subscriptable
+2024-08-23 17:36:31,436 - ERROR - Error in link executor: 'NoneType' object is not subscriptable
+2024-08-23 17:36:42,145 - ERROR - Error in link executor: 'NoneType' object is not subscriptable
+2024-08-23 17:37:39,783 - INFO - Database connection pool initialized.
+2024-08-23 17:37:40,093 - ERROR - Error in link executor: 'NoneType' object is not subscriptable
+2024-08-23 17:38:17,837 - INFO - Database connection pool initialized.
+2024-08-23 17:38:19,482 - ERROR - Error in link executor: 'NoneType' object is not subscriptable
+2024-08-23 17:38:35,050 - INFO - Database connection pool initialized.
+2024-08-23 17:38:46,508 - INFO - Database connection pool initialized.
+2024-08-23 17:39:13,090 - INFO - Database connection pool initialized.
+2024-08-23 17:39:13,102 - ERROR - Error in link executor: 'NoneType' object is not subscriptable
+2024-08-23 17:39:20,813 - INFO - Database connection pool initialized.
+2024-08-23 17:39:22,569 - ERROR - Error in link executor: 'NoneType' object is not subscriptable
+2024-08-23 17:39:43,837 - INFO - Database connection pool initialized.
+2024-08-23 17:39:44,196 - ERROR - Error in link executor: list index out of range
+2024-08-23 17:40:12,648 - INFO - Database connection pool initialized.
+2024-08-23 17:40:35,014 - INFO - Database connection pool initialized.
+2024-08-23 17:41:16,399 - INFO - Sheet 'iphone 5s' created successfully.
+2024-08-23 17:41:19,813 - INFO - 8 cells appended.
+2024-08-23 17:41:21,661 - INFO - 8 cells appended.
+2024-08-23 17:41:23,637 - INFO - 9 cells appended.
+2024-08-23 17:41:25,220 - INFO - 8 cells appended.
+2024-08-23 17:41:28,539 - INFO - 9 cells appended.
+2024-08-23 17:41:31,664 - INFO - 8 cells appended.
+2024-08-23 17:41:34,122 - INFO - 9 cells appended.
+2024-08-23 17:41:36,165 - INFO - 8 cells appended.
+2024-08-23 17:41:38,750 - INFO - 8 cells appended.
+2024-08-23 17:41:40,846 - INFO - 9 cells appended.
+2024-08-23 17:41:42,853 - INFO - 8 cells appended.
+2024-08-23 17:41:44,789 - INFO - 8 cells appended.
+2024-08-23 17:41:46,870 - INFO - 8 cells appended.
+2024-08-23 17:41:48,827 - INFO - 8 cells appended.
+2024-08-23 17:41:50,928 - INFO - 8 cells appended.
+2024-08-23 17:41:53,537 - INFO - 8 cells appended.
+2024-08-23 17:41:56,801 - INFO - 8 cells appended.
+2024-08-23 17:41:58,229 - INFO - 8 cells appended.
+2024-08-23 17:42:02,263 - INFO - 9 cells appended.
+2024-08-23 17:42:03,983 - INFO - 8 cells appended.
+2024-08-23 17:42:06,339 - INFO - 9 cells appended.
+2024-08-23 17:42:23,247 - INFO - 9 cells appended.
+2024-08-23 17:42:26,007 - INFO - 8 cells appended.
+2024-08-23 17:42:29,360 - INFO - 8 cells appended.
+2024-08-23 17:42:31,711 - INFO - 8 cells appended.
+2024-08-23 17:42:33,638 - INFO - 9 cells appended.
+2024-08-23 17:42:36,754 - INFO - 9 cells appended.
+2024-08-23 17:42:38,822 - INFO - 9 cells appended.
+2024-08-23 17:42:56,194 - INFO - 8 cells appended.
+2024-08-23 17:43:00,797 - INFO - 9 cells appended.
+2024-08-23 17:43:05,080 - INFO - 8 cells appended.
+2024-08-23 17:43:06,593 - INFO - 8 cells appended.
+2024-08-23 17:43:08,531 - INFO - 8 cells appended.
+2024-08-23 17:43:10,683 - INFO - 8 cells appended.
+2024-08-23 17:43:12,869 - INFO - 8 cells appended.
+2024-08-23 17:43:14,219 - INFO - 8 cells appended.
+2024-08-23 17:43:16,855 - INFO - 8 cells appended.
+2024-08-23 17:43:21,377 - INFO - 9 cells appended.
+2024-08-23 17:43:26,185 - INFO - 9 cells appended.
+2024-08-23 17:43:28,495 - INFO - 8 cells appended.
+2024-08-23 17:43:32,290 - INFO - 8 cells appended.
+2024-08-23 17:43:35,837 - INFO - 8 cells appended.
+2024-08-23 17:43:38,224 - INFO - 8 cells appended.
+2024-08-23 17:43:40,599 - INFO - 8 cells appended.
+2024-08-23 17:43:42,894 - INFO - 9 cells appended.
+2024-08-23 17:43:45,669 - INFO - 8 cells appended.
+2024-08-23 17:44:02,653 - INFO - 9 cells appended.
+2024-08-23 17:44:06,456 - INFO - 8 cells appended.
+2024-08-23 17:44:11,219 - INFO - 8 cells appended.
+2024-08-23 17:44:12,990 - INFO - 8 cells appended.
+2024-08-23 17:44:59,707 - INFO - A sheet with the name 'iphone 5s' already exists.
+2024-08-23 17:45:00,750 - INFO - Existing data cleared.
+2024-08-23 17:45:04,406 - INFO - 8 cells appended.
+2024-08-23 17:45:06,645 - INFO - 8 cells appended.
+2024-08-23 17:45:08,736 - INFO - 8 cells appended.
+2024-08-23 17:47:55,772 - INFO - Database connection pool initialized.
+2024-08-23 17:48:58,672 - INFO - Database connection pool initialized.
+2024-08-23 17:49:03,534 - INFO - Database connection pool initialized.
+2024-08-23 17:49:43,754 - INFO - Database connection pool initialized.
+2024-08-23 17:58:41,284 - INFO - Database connection pool initialized.
+2024-08-23 18:01:53,138 - INFO - Database connection pool initialized.
+2024-08-23 18:02:36,830 - ERROR - Failed to execute query: invalid input for query argument $1: [<Record id=1347 query='iphone 5s'>] ('list' object cannot be interpreted as an integer)
+2024-08-23 18:02:36,831 - ERROR - Error while deleting query from Database: fetch iphone 5s: invalid input for query argument $1: [<Record id=1347 query='iphone 5s'>] ('list' object cannot be interpreted as an integer)
+2024-08-23 18:02:46,946 - INFO - Database connection pool initialized.
+2024-08-23 18:02:55,249 - ERROR - Failed to execute query: invalid input for query argument $1: [<Record id=1347 query='iphone 5s'>] ('list' object cannot be interpreted as an integer)
+2024-08-23 18:02:55,249 - ERROR - Error while deleting query from Database: fetch iphone 5s: invalid input for query argument $1: [<Record id=1347 query='iphone 5s'>] ('list' object cannot be interpreted as an integer)
+2024-08-23 18:03:32,743 - INFO - Database connection pool initialized.
+2024-08-23 18:03:36,173 - ERROR - Error while deleting query from Database: query iphone 5s: 'coroutine' object is not subscriptable
+2024-08-23 18:04:00,863 - INFO - Database connection pool initialized.
+2024-08-23 18:04:29,693 - INFO - Database connection pool initialized.
+2024-08-23 18:06:56,973 - INFO - Database connection pool initialized.
+2024-08-23 18:19:47,736 - INFO - Database connection pool initialized.
+2024-08-23 19:06:53,268 - INFO - Database connection pool initialized.
+2024-08-24 11:58:25,155 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 10061] Connect call failed ('127.0.0.1', 5432), [Errno 10061] Connect call failed ('::1', 5432, 0, 0)
+2024-08-24 11:59:05,508 - INFO - Database connection pool initialized.
+2024-08-24 12:12:57,886 - INFO - Database connection pool initialized.
+2024-08-24 12:17:47,080 - INFO - Database connection pool initialized.
+2024-08-24 12:18:07,048 - INFO - Database connection pool initialized.
+2024-08-24 12:18:35,941 - INFO - Database connection pool initialized.
+2024-08-24 12:18:40,783 - INFO - Database connection pool initialized.
+2024-08-24 12:22:07,789 - INFO - Database connection pool initialized.
+2024-08-24 12:27:15,502 - INFO - Database connection pool initialized.
+2024-08-24 12:31:05,740 - INFO - Database connection pool initialized.
+2024-08-24 12:57:21,002 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-24 12:57:22,135 - INFO - Existing data cleared.
+2024-08-24 12:57:45,149 - INFO - 8 cells appended.
+2024-08-24 12:57:46,928 - INFO - 8 cells appended.
+2024-08-24 12:57:49,358 - INFO - 8 cells appended.
+2024-08-24 12:57:53,391 - INFO - 8 cells appended.
+2024-08-24 12:57:55,624 - INFO - 8 cells appended.
+2024-08-24 12:57:57,872 - INFO - 8 cells appended.
+2024-08-24 12:57:59,878 - INFO - 8 cells appended.
+2024-08-24 12:58:01,845 - INFO - 8 cells appended.
+2024-08-24 12:58:04,170 - INFO - 8 cells appended.
+2024-08-24 12:58:09,114 - INFO - Database connection pool initialized.
+2024-08-24 12:58:45,422 - ERROR - Failed to fetch page 1. Status code: 401
+2024-08-24 13:06:36,402 - INFO - Database connection pool initialized.
+2024-08-24 13:06:53,586 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-24 13:06:54,604 - INFO - Existing data cleared.
+2024-08-24 13:06:58,883 - INFO - 8 cells appended.
+2024-08-24 13:07:02,069 - INFO - 8 cells appended.
+2024-08-24 13:07:08,373 - INFO - 8 cells appended.
+2024-08-24 13:07:09,966 - INFO - 8 cells appended.
+2024-08-24 13:07:12,001 - INFO - 8 cells appended.
+2024-08-24 13:07:14,530 - INFO - 8 cells appended.
+2024-08-24 13:07:16,578 - INFO - 8 cells appended.
+2024-08-24 13:07:18,758 - INFO - 8 cells appended.
+2024-08-24 13:07:20,761 - INFO - 8 cells appended.
+2024-08-24 13:07:26,950 - INFO - 8 cells appended.
+2024-08-24 13:07:30,283 - INFO - 8 cells appended.
+2024-08-24 13:07:32,635 - INFO - 8 cells appended.
+2024-08-24 13:12:19,374 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-24 13:12:20,288 - INFO - Existing data cleared.
+2024-08-24 13:12:25,243 - INFO - 8 cells appended.
+2024-08-24 13:12:28,968 - INFO - 8 cells appended.
+2024-08-24 13:12:31,649 - INFO - 8 cells appended.
+2024-08-24 13:12:35,375 - INFO - 8 cells appended.
+2024-08-24 13:12:37,936 - INFO - 8 cells appended.
+2024-08-24 13:12:40,596 - INFO - 8 cells appended.
+2024-08-24 13:12:58,379 - INFO - 8 cells appended.
+2024-08-24 13:13:15,769 - INFO - 8 cells appended.
+2024-08-24 13:13:21,387 - INFO - 8 cells appended.
+2024-08-24 13:13:23,959 - INFO - 8 cells appended.
+2024-08-24 13:13:27,267 - INFO - 8 cells appended.
+2024-08-24 13:13:29,860 - INFO - 8 cells appended.
+2024-08-24 13:34:30,164 - INFO - A sheet with the name 'Apple Juicy' already exists.
+2024-08-24 13:34:31,275 - INFO - Existing data cleared.
+2024-08-24 13:34:36,064 - INFO - 8 cells appended.
+2024-08-24 13:34:38,969 - INFO - 8 cells appended.
+2024-08-24 13:34:41,841 - INFO - 8 cells appended.
+2024-08-24 13:34:45,640 - INFO - 8 cells appended.
+2024-08-24 13:34:48,329 - INFO - 8 cells appended.
+2024-08-24 13:35:18,038 - INFO - 8 cells appended.
+2024-08-24 13:35:20,724 - INFO - 8 cells appended.
+2024-08-24 13:35:24,011 - INFO - 8 cells appended.
+2024-08-24 13:35:28,763 - INFO - 8 cells appended.
+2024-08-24 13:35:31,600 - INFO - 8 cells appended.
+2024-08-24 13:35:34,972 - INFO - 8 cells appended.
+2024-08-24 13:35:38,181 - INFO - 8 cells appended.
+2024-08-24 13:37:12,939 - INFO - Database connection pool initialized.
+2024-08-24 13:38:32,070 - INFO - Database connection pool initialized.
+2024-08-24 13:39:13,930 - INFO - Database connection pool initialized.
+2024-08-24 13:41:49,718 - INFO - Database connection pool initialized.
+2024-08-24 13:49:27,612 - INFO - Existing data cleared.
+2024-08-24 13:49:33,802 - INFO - 8 cells appended.
+2024-08-24 13:49:37,066 - INFO - 8 cells appended.
+2024-08-24 13:49:39,697 - INFO - 9 cells appended.
+2024-08-24 13:49:42,212 - INFO - 8 cells appended.
+2024-08-24 13:49:45,383 - INFO - 8 cells appended.
+2024-08-24 13:49:48,083 - INFO - 8 cells appended.
+2024-08-24 13:49:51,158 - INFO - 8 cells appended.
+2024-08-24 13:49:53,807 - INFO - 8 cells appended.
+2024-08-24 13:49:56,993 - INFO - 8 cells appended.
+2024-08-24 13:50:02,239 - INFO - 9 cells appended.
+2024-08-24 13:50:23,175 - INFO - 8 cells appended.
+2024-08-24 13:50:26,629 - INFO - 8 cells appended.
+2024-08-24 13:55:36,292 - INFO - Sheet 'macbook pro' created successfully.
+2024-08-24 13:55:39,534 - INFO - 8 cells appended.
+2024-08-24 13:55:42,284 - INFO - 9 cells appended.
+2024-08-24 13:55:45,748 - INFO - 8 cells appended.
+2024-08-24 13:55:49,594 - INFO - 9 cells appended.
+2024-08-24 13:55:54,100 - INFO - 8 cells appended.
+2024-08-24 13:55:57,542 - INFO - 9 cells appended.
+2024-08-24 13:56:00,872 - INFO - 9 cells appended.
+2024-08-24 13:56:03,478 - INFO - 9 cells appended.
+2024-08-24 13:56:14,183 - INFO - 9 cells appended.
+2024-08-24 13:56:20,622 - INFO - 9 cells appended.
+2024-08-24 13:56:30,609 - INFO - 8 cells appended.
+2024-08-24 13:56:39,859 - INFO - 9 cells appended.
+2024-08-24 13:56:42,622 - INFO - 9 cells appended.
+2024-08-24 13:57:01,557 - INFO - 8 cells appended.
+2024-08-24 13:57:06,545 - INFO - 9 cells appended.
+2024-08-24 13:57:09,051 - INFO - 8 cells appended.
+2024-08-24 13:57:12,604 - INFO - 8 cells appended.
+2024-08-24 13:57:15,346 - INFO - 8 cells appended.
+2024-08-24 13:57:19,197 - INFO - 8 cells appended.
+2024-08-24 13:57:22,004 - INFO - 8 cells appended.
+2024-08-24 13:57:25,299 - INFO - 9 cells appended.
+2024-08-24 13:57:28,022 - INFO - 9 cells appended.
+2024-08-24 13:57:30,918 - INFO - 9 cells appended.
+2024-08-24 13:57:35,097 - INFO - 8 cells appended.
+2024-08-24 13:57:38,401 - INFO - 9 cells appended.
+2024-08-24 13:57:42,495 - INFO - 8 cells appended.
+2024-08-24 13:57:47,944 - INFO - 8 cells appended.
+2024-08-24 13:57:49,806 - INFO - 9 cells appended.
+2024-08-24 13:57:52,263 - INFO - 8 cells appended.
+2024-08-24 13:57:54,915 - INFO - 8 cells appended.
+2024-08-24 13:58:04,323 - INFO - 8 cells appended.
+2024-08-24 13:58:33,448 - INFO - 9 cells appended.
+2024-08-24 13:58:36,628 - INFO - 8 cells appended.
+2024-08-24 13:58:56,117 - INFO - 8 cells appended.
+2024-08-24 13:58:59,085 - INFO - 9 cells appended.
+2024-08-24 13:59:01,945 - INFO - 8 cells appended.
+2024-08-24 13:59:06,717 - INFO - 8 cells appended.
+2024-08-24 13:59:09,995 - INFO - 9 cells appended.
+2024-08-24 13:59:13,215 - INFO - 9 cells appended.
+2024-08-24 13:59:15,633 - INFO - 9 cells appended.
+2024-08-24 13:59:18,044 - INFO - 8 cells appended.
+2024-08-24 13:59:20,940 - INFO - 9 cells appended.
+2024-08-24 13:59:26,126 - INFO - 8 cells appended.
+2024-08-24 13:59:28,715 - INFO - 8 cells appended.
+2024-08-24 13:59:31,812 - INFO - 9 cells appended.
+2024-08-24 13:59:34,908 - INFO - 9 cells appended.
+2024-08-24 13:59:54,092 - INFO - 8 cells appended.
+2024-08-24 14:00:08,469 - INFO - 9 cells appended.
+2024-08-24 14:00:12,356 - INFO - 9 cells appended.
+2024-08-24 14:00:15,686 - INFO - 9 cells appended.
