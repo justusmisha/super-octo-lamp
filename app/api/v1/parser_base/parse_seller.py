@@ -8,6 +8,7 @@ from app.core.parser.link_executor import process_link
 from app.core.parser.parser import ProfileParser, Parser
 from app.loader import db_links, db_google_sheets, db_queries, db_seller
 from app.schemas.parser import AddSeller, ParseSeller
+from app.utils.utils import refactor_text
 from app_logging import logger
 
 router = APIRouter()
@@ -22,7 +23,7 @@ async def save_seller(request: AddSeller):
         url = request.url
         parser = ProfileParser(browser_parser(url))
         start = time()
-        name = await parser.get_name_profile()
+        name = await refactor_text(await parser.get_name_profile())
         await db_seller.save_seller_db(url, name)
         end = time()
         length = end - start
