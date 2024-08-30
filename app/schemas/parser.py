@@ -26,7 +26,7 @@ class AddSeller(BaseModel):
 
 
 class ParseSeller(BaseModel):
-    page_numbers: int
+    page_numbers: str
     seller_name: str
     google_sheet: str
 

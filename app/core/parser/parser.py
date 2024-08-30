@@ -1,3 +1,5 @@
+import asyncio
+import math
 import urllib.parse
 import requests
 
@@ -16,21 +18,41 @@ class Parser:
     def __init__(self, page_numbers, query=None, city=None, seller_id=None):
         self.query = query
         self.query_refractored = '+'.join(query.split(' '))
-        self.page_numbers = page_numbers
+        self.page_numbers = int(page_numbers) if page_numbers != 'all' else self.page_counter()
         self.city = city_refractor(city) if city else None
         self.seller_id = seller_id if seller_id else None
+
+    def page_counter(self):
+        try:
+            encoded_url = urllib.parse.quote(self.query)
+            targetUrl = f"http://api.scrape.do?token={TOKEN}&url={encoded_url}"
+            response = requests.get(targetUrl)
+            html = BeautifulSoup(response.text, 'html.parser')
+            tab_button = html.find('span', class_='styles-module-tab-button-title-_fs7m')
+            if tab_button and tab_button.get_text(strip=True) == 'Активные':
+                counter_span = html.find('span', class_='styles-module-counter-qyO5b')
+                if counter_span:
+                    counter_value = counter_span.get_text(strip=True)
+                    counter_value = int(counter_value) / 12
+                    return math.ceil(counter_value)
+                else:
+                    logger.error('Counter span not found')
+                    return None
+            logger.error('No span named Активные')
+            return None
+        except Exception as e:
+            logger.error(f'Error occured in page counter: {e}')
+            return False
 
     async def parse_links(self):
         try:
             start_time = time()
             if not self.seller_id:
                 query_id = await db_queries.get_id_by_query(self.query)
-                print(query_id)
                 query_id = query_id[0]['id']
                 if self.city:
                     for page_number in range(self.page_numbers, 0, -1):
                         targetUrl = f"https://www.avito.ru/{self.city}?q={self.query_refractored}&p={page_number}"
-                        print(targetUrl)
                         encoded_url = urllib.parse.quote(targetUrl)
                         url = f"http://api.scrape.do?token={TOKEN}&url={encoded_url}"
                         response = requests.get(url)
@@ -48,13 +70,12 @@ class Parser:
                                 final_link = f'https://www.avito.ru/{self.city}{new_url}'
                                 await db_links.save_links_db(final_link, query_id)
             else:
-                for page in range(self.page_numbers, 0, -1):
+                for page in range(self.page_numbers):
                     unique_links = set()
                     targetUrl = self.query + f'&p={page}'
                     encoded_url = urllib.parse.quote(targetUrl)
                     url = f"http://api.scrape.do?token={TOKEN}&url={encoded_url}"
                     response = requests.get(url)
-
                     if response.status_code != 200:
                         logger.error(f"Failed to fetch page {page}. Status code: {response.status_code}")
                         continue
@@ -63,9 +84,11 @@ class Parser:
                     items = 12
                     for item in range(items):
                         divs = html.find_all('div',
-                                             {'data-marker': f'item_list_with_filters/item({item})',
-                                              'itemscope': '',
-                                              'itemtype': 'http://schema.org/Product'})
+                                             class_='styles-root-_gnXE photo-slider-slider-S15A_ styles-responsive-m3Vnz',
+                                             attrs={'data-marker': f'items/item({item})',
+                                                    'itemscope': '',
+                                                    'itemtype': 'http://schema.org/Product'})
+
                         if not divs:
                             break
 
@@ -73,12 +96,15 @@ class Parser:
                             a_tags = div.find_all('a', itemprop='url')
                             for a_tag in a_tags:
                                 href = a_tag.get('href')
-                                if href not in unique_links:
+                                if href and href not in unique_links:
                                     unique_links.add(href)
-                                    if href.startswith("https://www.avito.ru"):
-                                        await db_links.save_seller_links_db(seller_id=self.seller_id, link=href)
-                                    else:
-                                        await db_links.save_seller_links_db(seller_id=self.seller_id, link="https://www.avito.ru" + href)
+
+                                    full_link = href
+                                    if not href.startswith("https://www.avito.ru"):
+                                        full_link = "https://www.avito.ru" + href
+
+                                    await db_links.save_seller_links_db(seller_id=self.seller_id, link=full_link)
+
             end_time = time()
             elapsed_time = end_time - start_time
             return True, int(elapsed_time)
