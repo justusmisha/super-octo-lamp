@@ -7,8 +7,15 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    env_file:
-      - .env
-    restart: always
-    volumes:
-      - ./app.log:/app/app.log
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/db_avito_parser
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db_avito_parser
+    ports:
+      - "5432:5432"
