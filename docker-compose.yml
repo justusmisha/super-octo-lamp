@@ -7,9 +7,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    environment:
-      # Example environment variables
-      - ENV=production
+    env_file:
+      - .env
     restart: always
     volumes:
       - ./app.log:/app/app.log
