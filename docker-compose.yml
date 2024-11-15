@@ -11,3 +11,5 @@ services:
       # Example environment variables
       - ENV=production
     restart: always
+    volumes:
+      - ./app.log:/app/app.log
