@@ -35,4 +35,4 @@ if __name__ == "__main__":
     parser.add_argument("--docs", type=bool, default=True, help="Show or hide docs")
     args = parser.parse_args()
 
-    uvicorn.run("app.main:app", host="localhost", port=8000, reload=True, docs_url="/docs" if args.docs else None)
+    uvicorn.run("app.main:app", host="localhost", port=8000, reload=True)

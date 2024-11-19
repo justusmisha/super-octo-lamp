@@ -52,17 +52,18 @@ class Parser:
                 query_id = query_id[0]['id']
                 if self.city:
                     for page_number in range(self.page_numbers, 0, -1):
-                        targetUrl = f"https://www.avito.ru/{self.city}?q={self.query_refractored}&p={page_number}"
+                        targetUrl = f"https://www.avito.ru/{self.city}?localPriority=0&q={self.query_refractored}&p={page_number}"
+                        print(targetUrl)
                         encoded_url = urllib.parse.quote(targetUrl)
                         url = f"http://api.scrape.do?token={TOKEN}&url={encoded_url}"
                         response = requests.get(url)
                         html_soup = BeautifulSoup(response.text, features="html.parser")
-                        divs_with_class = html_soup.find('div', class_='items-items-kAJAg')
-                        divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+                        divs_with_class = html_soup.find('div', class_='items-items-pZX46')
+                        divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-Se7z4')
                         if not divs_with_class:
                             break
                         for tag in divs_with_class:
-                            href_link = tag.find('a', class_='iva-item-sliderLink-uLz1v')
+                            href_link = tag.find('a', class_='iva-item-sliderLink-Fvfau')
                             if href_link:
                                 url = href_link.get("href")
                                 parts = url.split('/')
@@ -132,4 +133,3 @@ class ProfileParser:
                 h1_name = name.find('h1').text.strip()
                 return h1_name
         return False
-
