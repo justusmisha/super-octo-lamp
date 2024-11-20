@@ -48,9 +48,7 @@ async def link_executor(request: ParserExecute):
         query = request.query
         google_sheet_name = request.google_sheet_name
         query = await db_queries.get_id_by_query(query)
-        print(query)
         query = query[0]
-        print(query)
         start = time()
         google_sheet = await db_google_sheets.get_sheet_by_name(google_sheet_name)
         await create_new_sheet(query['query'], google_sheet['sheet_id'])

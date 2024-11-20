@@ -6,7 +6,7 @@ from app.loader import db_links, db_seller
 from app_logging import logger
 
 
-async def process_link(sheet=None, sheet_id=None, query_id=None, seller_id: int = None, url:str=None):
+async def process_link(sheet=None, sheet_id=None, query_id=None, seller_id: int = None, url: str=None):
     try:
         if url:
             await card_parser_usage(sheet, sheet_id, url, idx=1)
@@ -27,22 +27,25 @@ async def process_link(sheet=None, sheet_id=None, query_id=None, seller_id: int 
 async def card_parser_usage(sheet, sheet_id, link, idx=None):
     try:
         parser = CardParser(url=link)
-        profile_link = await parser.get_profile_link()
-        profile_link = profile_link if isinstance(profile_link, str) else ''
+        data = await parser.parse_all()
+
+        profile_link = data.get('profile_link', '')
+
         downloader = Downloader(
-            title=await parser.get_title(),
-            geo=await parser.get_geo(),
-            number=await parser.get_number(),
-            views=await parser.get_views(),
-            description=await parser.get_description(),
-            description_html=await parser.get_description_html(),
-            photos=await parser.get_photos(),
+            title=data.get('title', ''),
+            geo=data.get('geo', ''),
+            number=data.get('number', ''),
+            views=data.get('views', ''),
+            description=data.get('description', ''),
+            description_html=data.get('description_html', ''),
+            photos=data.get('photos', ''),
             profile_link=profile_link,
-            product_link=await parser.get_product_link(),
-            rating=await parser.get_rating()
+            product_link=data.get('product_link', ''),
+            rating=data.get('rating', '')
         )
+
         range_start = f"{sheet}!A{idx}:H{idx}"
-        print(range_start)
         downloader.export_to_google(sheet_id, range_start, "USER_ENTERED")
     except Exception as e:
-        logger.warn(f"Failed to process link {link}: {e}")
+        logger.warning(f"Failed to process link {link}: {e}")
+

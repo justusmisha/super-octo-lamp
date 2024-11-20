@@ -1,8 +1,8 @@
+from concurrent.futures import ThreadPoolExecutor
 import asyncio
 import math
 import urllib.parse
 import requests
-
 from time import time
 from bs4 import BeautifulSoup
 
@@ -15,12 +15,13 @@ from app_logging import logger
 
 
 class Parser:
-    def __init__(self, page_numbers, query=None, city=None, seller_id=None):
+    def __init__(self, page_numbers, query=None, city=None, seller_id=None, max_threads=10):
         self.query = query
-        self.query_refractored = '+'.join(query.split(' '))
+        self.query_refractored = '+'.join(query.split(' ')) if query else None
         self.page_numbers = int(page_numbers) if page_numbers != 'all' else self.page_counter()
         self.city = city_refractor(city) if city else None
         self.seller_id = seller_id if seller_id else None
+        self.executor = ThreadPoolExecutor(max_threads)
 
     def page_counter(self):
         try:
@@ -41,76 +42,96 @@ class Parser:
             logger.error('No span named Активные')
             return None
         except Exception as e:
-            logger.error(f'Error occured in page counter: {e}')
+            logger.error(f'Error occurred in page counter: {e}')
             return False
+
+    async def fetch_page(self, url):
+        """Fetch a page using a thread in the executor."""
+        loop = asyncio.get_event_loop()
+        response = await loop.run_in_executor(self.executor, requests.get, url)
+        if response.status_code != 200:
+            logger.error(f"Failed to fetch URL: {url}. Status code: {response.status_code}")
+            return None
+        return BeautifulSoup(response.text, 'html.parser')
+
+    async def process_page(self, url, query_id=None, seller_id=None):
+        """
+        Process a single page, extracting links.
+        """
+        html_soup = await self.fetch_page(url)
+        if not html_soup:
+            return
+
+        unique_links = set()
+        div_class, link_class = self._get_classes(query_id)
+
+        divs = html_soup.find_all('div', class_=div_class)
+        for div in divs:
+            href = self._extract_link(div, link_class)
+            if href and href not in unique_links:
+                unique_links.add(href)
+                await self._save_link(href, query_id, seller_id)
+
+    def _get_classes(self, query_id):
+        """
+        Return the appropriate div and link class based on query_id.
+        """
+        if query_id:
+            return 'iva-item-body-GQomw', 'styles-module-root-m3BML styles-module-root_noVisited-HHF0s'
+        return 'body-root-vycQ5', 'styles-module-root-iSkj3 styles-module-root_noVisited-qJP5D'
+
+    def _extract_link(self, div, link_class):
+        """
+        Extract and format the link from the given div.
+        """
+        href_tag = div.find('a', class_=link_class)
+        if not href_tag:
+            return None
+        href = href_tag.get("href")
+        if href:
+            return f"https://www.avito.ru{href}" if not href.startswith("https") else href
+        return None
+
+    async def _save_link(self, link, query_id=None, seller_id=None):
+        """
+        Save the extracted link to the database based on query_id or seller_id.
+        """
+        if query_id:
+            await db_links.save_links_db(link, query_id)
+        elif seller_id:
+            await db_links.save_seller_links_db(seller_id=seller_id, link=link)
 
     async def parse_links(self):
         try:
             start_time = time()
+
+            def build_scrape_url(target_url):
+                """Encodes the target URL and appends the scraping API token."""
+                encoded_url = urllib.parse.quote(target_url)
+                return f"http://api.scrape.do?token={TOKEN}&url={encoded_url}"
+
+            urls = []
             if not self.seller_id:
                 query_id = await db_queries.get_id_by_query(self.query)
                 query_id = query_id[0]['id']
+                print(query_id)
                 if self.city:
                     for page_number in range(self.page_numbers, 0, -1):
-                        targetUrl = f"https://www.avito.ru/{self.city}?localPriority=0&q={self.query_refractored}&p={page_number}"
-                        print(targetUrl)
-                        encoded_url = urllib.parse.quote(targetUrl)
-                        url = f"http://api.scrape.do?token={TOKEN}&url={encoded_url}"
-                        response = requests.get(url)
-                        html_soup = BeautifulSoup(response.text, features="html.parser")
-                        divs_with_class = html_soup.find('div', class_='items-items-pZX46')
-                        divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-Se7z4')
-                        if not divs_with_class:
-                            break
-                        for tag in divs_with_class:
-                            href_link = tag.find('a', class_='iva-item-sliderLink-Fvfau')
-                            if href_link:
-                                url = href_link.get("href")
-                                parts = url.split('/')
-                                new_url = '/' + '/'.join(parts[2:])
-                                final_link = f'https://www.avito.ru/{self.city}{new_url}'
-                                await db_links.save_links_db(final_link, query_id)
+                        target_url = f"https://www.avito.ru/{self.city}?localPriority=0&q={self.query_refractored}&p={page_number}"
+                        print(target_url)
+                        urls.append(build_scrape_url(target_url))
             else:
-                for page in range(self.page_numbers):
-                    unique_links = set()
-                    targetUrl = self.query + f'&p={page}'
-                    encoded_url = urllib.parse.quote(targetUrl)
-                    url = f"http://api.scrape.do?token={TOKEN}&url={encoded_url}"
-                    response = requests.get(url)
-                    if response.status_code != 200:
-                        logger.error(f"Failed to fetch page {page}. Status code: {response.status_code}")
-                        continue
+                for page_number in range(self.page_numbers):
+                    target_url = f"{self.query}&p={page_number}"
+                    urls.append(build_scrape_url(target_url))
 
-                    html = BeautifulSoup(response.text, 'html.parser')
-                    items = 12
-                    for item in range(items):
-                        divs = html.find_all('div',
-                                             class_='styles-root-_gnXE photo-slider-slider-S15A_ styles-responsive-m3Vnz',
-                                             attrs={'data-marker': f'items/item({item})',
-                                                    'itemscope': '',
-                                                    'itemtype': 'http://schema.org/Product'})
+            tasks = [self.process_page(url, query_id=query_id if not self.seller_id else None, seller_id=self.seller_id) for url in urls]
+            await asyncio.gather(*tasks)
 
-                        if not divs:
-                            break
-
-                        for div in divs:
-                            a_tags = div.find_all('a', itemprop='url')
-                            for a_tag in a_tags:
-                                href = a_tag.get('href')
-                                if href and href not in unique_links:
-                                    unique_links.add(href)
-
-                                    full_link = href
-                                    if not href.startswith("https://www.avito.ru"):
-                                        full_link = "https://www.avito.ru" + href
-
-                                    await db_links.save_seller_links_db(seller_id=self.seller_id, link=full_link)
-
-            end_time = time()
-            elapsed_time = end_time - start_time
+            elapsed_time = time() - start_time
             return True, int(elapsed_time)
         except Exception as e:
-            logger.exception(e)
+            logger.exception("An error occurred during parsing.")
             return False
 
 

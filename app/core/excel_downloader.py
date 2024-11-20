@@ -15,39 +15,55 @@ def google_logger(SCOPES):
 
 
 class Downloader:
-    def __init__(self, title, geo, number, views, description, description_html, photos, profile_link, product_link, rating):
-        self.title = title
-        self.geo = geo
-        self.number = number
-        self.views = views
-        self.description = description
-        self.description_html = description_html
-        self.photos = photos
-        self.profile_link = profile_link
-        self.product_link = product_link
-        self.rating = rating
+    def __init__(self, title=None, geo=None, number=None, views=None, description=None,
+                 description_html=None, photos=None, profile_link=None, product_link=None,
+                 rating=None):
+        self.title = title or ''
+        self.geo = geo or ''
+        self.number = number or ''
+        self.views = views or ''
+        self.description = description or ''
+        self.description_html = description_html or ''
+        self.photos = photos or ''
+        self.profile_link = profile_link or ''
+        self.product_link = product_link or ''
+        self.rating = rating or ''
 
-    def export_to_google(self, spreadsheet_id, range_name, value_input_option):
-        creds = google_logger(SCOPES)
-
-        try:
-            service = build("sheets", "v4", credentials=creds)
-
-            values = [
-                [
-                    self.number,
-                    self.title,
-                    self.geo,
-                    self.description,
-                    self.description_html,
-                    self.photos,
-                    self.views,
-                    self.rating,
-                    self.product_link,
-                    self.profile_link,
-                ],
+    def _get_values(self):
+        """
+        Prepares the data in the correct format for Google Sheets.
+        """
+        return [
+            [
+                self.number,
+                self.title,
+                self.geo,
+                self.description,
+                self.description_html,
+                self.photos,
+                self.views,
+                self.rating,
+                self.product_link,
+                self.profile_link,
             ]
-            body = {"values": values}
+        ]
+
+    def _get_google_service(self):
+        """
+        Returns an authenticated Google Sheets service.
+        """
+        creds = google_logger(SCOPES)
+        try:
+            return build("sheets", "v4", credentials=creds)
+        except Exception as err:
+            logger.error(f"Failed to build Google Sheets service: {err}")
+            raise
+
+    def _append_to_sheet(self, service, spreadsheet_id, range_name, value_input_option, body):
+        """
+        Appends the given data to the Google Sheets document.
+        """
+        try:
             result = (
                 service.spreadsheets()
                 .values()
@@ -59,11 +75,29 @@ class Downloader:
                 )
                 .execute()
             )
-            logger.info(f"{(result.get('updates').get('updatedCells'))} cells appended.")
             return result
-
         except HttpError as err:
-            logger.warn(err)
+            logger.error(f"Failed to append data to Google Sheets: {err}")
+            raise
+
+    def export_to_google(self, spreadsheet_id, range_name, value_input_option):
+        """
+        Exports the current data to a Google Sheets spreadsheet.
+        """
+        service = self._get_google_service()
+        values = self._get_values()
+
+        values = [[str(cell) if isinstance(cell, (list, dict)) else cell for cell in row] for row in values]
+
+        body = {"values": values}
+
+        try:
+            result = self._append_to_sheet(service, spreadsheet_id, range_name, value_input_option, body)
+            updated_cells = result.get("updates", {}).get("updatedCells", 0)
+            logger.info(f"{updated_cells} cells appended.")
+            return result
+        except Exception as err:
+            logger.error(f"Error exporting data to Google Sheets: {err}")
 
 
 async def create_new_sheet(query_name, spreadsheet_id, clear=True):
