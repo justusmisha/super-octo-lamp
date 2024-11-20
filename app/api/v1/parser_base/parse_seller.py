@@ -51,7 +51,7 @@ async def parse_seller(request: ParseSeller):
         start = time()
         parser = Parser(page_numbers, query=seller[0]['seller_link'], seller_id=seller[0]['id'])
         result = await parser.parse_links()
-        if result:
+        if result[0]:
             await process_link(sheet=seller_name, sheet_id=google_sheet['sheet_id'], seller_id=seller[0]['id'])
             end = time()
             length = end - start
