@@ -16,11 +16,12 @@ class BaseDb:
             try:
 
                 BaseDb._pool = await asyncpg.create_pool(
-                    database='parser_db',
                     user='postgres',
                     password='postgres',
-                    host='localhost',
-                    port=5432
+                    database='parser_db',
+                    host='172.17.0.1',
+                    port=5432,
+                    ssl=False
                 )
                 logger.info("Database connection pool initialized.")
             except Exception as e:

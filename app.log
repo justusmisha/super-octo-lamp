@@ -1172,3 +1172,87 @@ AttributeError: 'NoneType' object has no attribute 'find_all'
 2024-08-24 14:00:08,469 - INFO - 9 cells appended.
 2024-08-24 14:00:12,356 - INFO - 9 cells appended.
 2024-08-24 14:00:15,686 - INFO - 9 cells appended.
+2024-11-15 18:52:38,356 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 111] Connect call failed ('::1', 5432, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 5432)
+2024-11-15 18:53:03,299 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 111] Connect call failed ('::1', 5432, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 5432)
+2024-11-15 18:54:26,242 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 111] Connect call failed ('::1', 5432, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 5432)
+2024-11-15 18:57:18,487 - ERROR - Failed to initialize database pool: Multiple exceptions: [Errno 111] Connect call failed ('::1', 5432, 0, 0), [Errno 111] Connect call failed ('127.0.0.1', 5432)
+2024-11-15 19:01:52,768 - INFO - Database connection pool initialized.
+2024-11-15 19:06:36,037 - ERROR - Failed to initialize database pool: database "parser_db" does not exist
+2024-11-15 19:07:02,469 - ERROR - Failed to initialize database pool: database "parser_db" does not exist
+2024-11-18 11:47:34,389 - INFO - Database connection pool initialized.
+2024-11-18 11:47:56,537 - INFO - A sheet with the name 'iphone' already exists.
+2024-11-18 11:47:57,070 - INFO - Existing data cleared.
+2024-11-18 11:48:02,333 - INFO - 9 cells appended.
+2024-11-18 11:48:06,003 - INFO - 9 cells appended.
+2024-11-18 12:14:39,564 - INFO - Database connection pool initialized.
+2024-11-19 11:31:41,205 - INFO - Database connection pool initialized.
+2024-11-19 11:33:22,269 - INFO - Database connection pool initialized.
+2024-11-19 11:35:46,616 - INFO - Database connection pool initialized.
+2024-11-19 11:39:57,208 - INFO - Database connection pool initialized.
+2024-11-19 11:45:00,574 - INFO - Database connection pool initialized.
+2024-11-19 11:45:59,990 - INFO - Database connection pool initialized.
+2024-11-19 11:46:09,774 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "/root/super-octo-lamp/app/core/parser/parser.py", line 61, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-11-19 11:46:50,407 - INFO - Sheet 'Сендвич панели' created successfully.
+2024-11-19 11:47:15,714 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "/root/super-octo-lamp/app/core/parser/parser.py", line 61, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-11-19 11:53:05,148 - INFO - Database connection pool initialized.
+2024-11-19 11:53:18,226 - ERROR - 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "/root/super-octo-lamp/app/core/parser/parser.py", line 61, in parse_links
+    divs_with_class = divs_with_class.find_all('div', class_='iva-item-root-_lk9K')
+AttributeError: 'NoneType' object has no attribute 'find_all'
+2024-11-19 12:20:28,782 - INFO - Database connection pool initialized.
+2024-11-19 12:21:01,482 - INFO - A sheet with the name 'Сендвич панели' already exists.
+2024-11-19 12:21:02,788 - INFO - Existing data cleared.
+2024-11-19 12:22:02,079 - INFO - 2 cells appended.
+2024-11-19 12:22:26,894 - INFO - 9 cells appended.
+2024-11-19 12:22:43,303 - INFO - 9 cells appended.
+2024-11-19 12:23:23,763 - INFO - 9 cells appended.
+2024-11-19 12:23:50,841 - INFO - 9 cells appended.
+2024-11-19 12:24:50,197 - INFO - 2 cells appended.
+2024-11-19 12:25:49,471 - INFO - 2 cells appended.
+2024-11-19 12:26:16,268 - INFO - 9 cells appended.
+2024-11-19 12:27:15,514 - INFO - 2 cells appended.
+2024-11-19 12:27:32,187 - INFO - 9 cells appended.
+2024-11-19 12:28:31,579 - INFO - 2 cells appended.
+2024-11-19 12:29:31,069 - INFO - 2 cells appended.
+2024-11-19 12:30:30,348 - INFO - 2 cells appended.
+2024-11-19 12:31:29,612 - INFO - 2 cells appended.
+2024-11-19 12:32:29,027 - INFO - 2 cells appended.
+2024-11-19 12:32:40,851 - INFO - Database connection pool initialized.
+2024-11-19 12:32:50,084 - INFO - Database connection pool initialized.
+2024-11-19 12:33:28,311 - INFO - 2 cells appended.
+2024-11-19 12:33:40,407 - INFO - Database connection pool initialized.
+2024-11-19 12:34:10,247 - INFO - Database connection pool initialized.
+2024-11-19 12:36:33,372 - INFO - Sheet 'Gallerique' created successfully.
+2024-11-19 12:36:35,968 - ERROR - No span named Активные
+2024-11-19 12:36:35,969 - ERROR - 'NoneType' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "/root/super-octo-lamp/app/core/parser/parser.py", line 74, in parse_links
+    for page in range(self.page_numbers):
+TypeError: 'NoneType' object cannot be interpreted as an integer
+2024-11-19 12:40:30,214 - INFO - A sheet with the name 'Gallerique' already exists.
+2024-11-19 12:40:31,380 - INFO - Existing data cleared.
+2024-11-19 12:47:36,508 - INFO - A sheet with the name 'Gallerique' already exists.
+2024-11-19 12:47:37,689 - INFO - Existing data cleared.
+2024-11-20 08:11:00,208 - INFO - A sheet with the name 'Gallerique' already exists.
+2024-11-20 08:11:00,761 - INFO - Existing data cleared.
+2024-11-20 08:11:07,097 - ERROR - No span named Активные
+2024-11-20 08:11:07,098 - ERROR - 'NoneType' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "/root/super-octo-lamp/app/core/parser/parser.py", line 74, in parse_links
+    for page in range(self.page_numbers):
+TypeError: 'NoneType' object cannot be interpreted as an integer
+2024-11-20 09:08:15,457 - INFO - A sheet with the name 'Gallerique' already exists.
+2024-11-20 09:08:15,945 - INFO - Existing data cleared.
+2024-12-09 18:40:54,149 - INFO - Database connection pool initialized.
+2024-12-09 18:41:58,764 - INFO - Database connection pool initialized.
+2024-12-09 18:42:28,535 - INFO - Database connection pool initialized.
+2025-06-07 10:59:44,608 - INFO - Database connection pool initialized.

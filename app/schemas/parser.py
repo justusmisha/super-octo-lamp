@@ -14,7 +14,7 @@ class SaveByQuery(BaseModel):
 
 class ParserExecute(BaseModel):
     google_sheet_name: str
-    query: str
+    query_id: int
 
 
 class QueryDelete(BaseModel):

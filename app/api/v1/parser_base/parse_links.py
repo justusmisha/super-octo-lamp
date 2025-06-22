@@ -44,10 +44,11 @@ async def link_executor(request: ParserExecute):
     """
     Парсит ссылки и добавляет их в гугл док
     """
+    print(request)
     try:
-        query = request.query
+        query_id = request.query_id
         google_sheet_name = request.google_sheet_name
-        query = await db_queries.get_id_by_query(query)
+        query = await db_queries.get_query_by_id(query_id)
         query = query[0]
         start = time()
         google_sheet = await db_google_sheets.get_sheet_by_name(google_sheet_name)
